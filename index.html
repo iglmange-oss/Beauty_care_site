@@ -5,55 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glow & Harmony - Natural Beauty Care</title>
     <style>
-        /* Basic CSS for a clean look - consider moving this to a 'styles.css' file */
+        /* Basic CSS for a clean look */
         body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background-color: #f8f8f8; color: #333; line-height: 1.6; }
         header { background-color: #d8c2aa; color: white; padding: 20px 0; text-align: center; }
         header h1 { margin: 0; font-size: 2.5em; letter-spacing: 2px; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; transition: opacity 0.3s; }
-        nav a:hover { opacity: 0.8; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
         .container { width: 80%; margin: 20px auto; padding: 0 10px; }
-        .hero-image { 
-            width: 100%; 
-            height: 400px; 
-            object-fit: cover; 
-            margin-bottom: 30px; 
-            border-radius: 8px; 
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
-        }
-        .article-section { 
-            display: flex; 
-            flex-wrap: wrap; 
-            justify-content: space-between; 
-            margin-top: 30px; 
-        }
-        .article-card { 
-            background-color: white; 
-            padding: 20px; 
-            margin-bottom: 20px; 
-            border-radius: 8px; 
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
-            width: 31%; /* Adjusted for 3 cards per row */
-        }
+        .hero-image { width: 100%; height: 400px; object-fit: cover; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .article-card-section { display: flex; flex-wrap: wrap; justify-content: space-between; margin-top: 30px; }
+        .article-card { background-color: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); width: 31%; }
         .article-card h3 { color: #8b5e3c; font-size: 1.2em; }
-        article { 
-            background-color: white; 
-            padding: 30px; 
-            margin-bottom: 25px; 
-            border-left: 5px solid #d8c2aa;
-            border-radius: 0 8px 8px 0; 
-        }
-        h2 { border-bottom: 2px solid #8b5e3c; padding-bottom: 10px; color: #8b5e3c; }
+        article { background-color: white; padding: 30px; margin-bottom: 25px; border-left: 5px solid #d8c2aa; border-radius: 0 8px 8px 0; }
+        h2 { border-bottom: 2px solid #8b5e3c; padding-bottom: 10px; color: #8b5e3c; margin-top: 40px;}
         article h3 { color: #8b5e3c; margin-top: 0; }
         footer { text-align: center; padding: 20px; background-color: #d8c2aa; color: white; margin-top: 40px; }
-        
-        /* Media Query for smaller screens */
-        @media (max-width: 900px) {
-            .container { width: 95%; }
-            .article-card { width: 48%; }
-        }
-        @media (max-width: 600px) {
-            .article-card { width: 100%; }
-        }
+        @media (max-width: 900px) { .article-card { width: 48%; } }
+        @media (max-width: 600px) { .article-card { width: 100%; } }
     </style>
 </head>
 <body>
@@ -63,8 +30,8 @@
         <p>Embrace Nature's Wisdom for Beautiful Skin</p>
         <nav>
             <a href="#home">HOME</a>
-            <a href="#articles">ALL ARTICLES</a>
-            <a href="#about">ABOUT US</a>
+            <a href="#articles-list">ARTICLE SUMMARIES</a>
+            <a href="#articles-content">FULL CONTENT</a>
         </nav>
     </header>
 
@@ -74,23 +41,22 @@
              alt="A serene picture of natural herbs and plants in a sunlit garden, symbolizing natural beauty." 
              class="hero-image">
 
-        <section id="articles">
-            <h2>✨ Latest Beauty Insights & Articles</h2>
+        <section id="articles-list">
+            <h2>📰 Featured Articles</h2>
             
-            <div class="article-section">
+            <div class="article-card-section">
                 <div class="article-card">
                     <h3>Hyaluronic Acid: The Hydration Hero</h3>
                     <p>Discover the science behind this powerful molecule and how it can instantly plump your complexion.</p>
                     <a href="#article-ha">Read More &raquo;</a>
                 </div>
                 <div class="article-card">
-                    <h3>The 5-Step Evening Routine for Ultimate Renewal</h3>
-                    <p>Unlock the secrets to letting your skin heal and regenerate while you sleep with our guide.</p>
+                    <h3>The 5-Step Evening Routine</h3>
+                    <p>Unlock the secrets to letting your skin heal and regenerate while you sleep.</p>
                     <a href="#article-routine">Read More &raquo;</a>
                 </div>
-
                 <div class="article-card">
-                    <h3>Niacinamide: Your Multi-Tasking Ingredient</h3>
+                    <h3>Niacinamide: Your Multi-Tasker</h3>
                     <p>Learn how Vitamin B3 strengthens your barrier, minimizes pores, and reduces redness.</p>
                     <a href="#article-niacinamide">Read More &raquo;</a>
                 </div>
@@ -100,105 +66,119 @@
                     <a href="#article-barrier">Read More &raquo;</a>
                 </div>
                 <div class="article-card">
-                    <h3>Gentle Exfoliation: Unlocking Natural Radiance</h3>
+                    <h3>Gentle Exfoliation for Radiance</h3>
                     <p>Achieve a brighter complexion without the irritation using safe, gentle methods.</p>
                     <a href="#article-exfoliation">Read More &raquo;</a>
                 </div>
-                <div class="article-card">
-                    <h3>Facial Massage: Your DIY Uplift</h3>
-                    <p>Boost circulation and reduce puffiness with simple, effective facial massage techniques.</p>
-                    <a href="#article-massage">Read More &raquo;</a>
-                </div>
-                <div class="article-card">
-                    <h3>Natural Remedies: Calming Redness</h3>
-                    <p>Soothing ingredients like Oats and Cica to calm inflammation and highly sensitive skin.</p>
-                    <a href="#article-redness">Read More &raquo;</a>
-                </div>
-
-                <div class="article-card" style="width: 31%;"><h3>Future Article: Topic Idea 1</h3><p>Placeholder for more great content coming soon!</p><a href="#">Coming Soon</a></div>
-                <div class="article-card" style="width: 31%;"><h3>Future Article: Topic Idea 2</h3><p>Placeholder for more great content coming soon!</p><a href="#">Coming Soon</a></div>
-                <div class="article-card" style="width: 31%;"><h3>Future Article: Topic Idea 3</h3><p>Placeholder for more great content coming soon!</p><a href="#">Coming Soon</a></div>
-
-
             </div>
+        </section>
 
+        <section id="articles-content">
+            <h2>📖 Full Article Content</h2>
             <hr>
-
+            
             <article id="article-ha">
                 <h3 style="color: #8b5e3c;">🧪 Hyaluronic Acid: The Hydration Hero Your Skin Needs</h3>
-                <p>Hyaluronic Acid (HA) is a powerful, naturally occurring substance found in the skin. Its primary function is to **retain water**, helping your tissues stay well-lubricated and moist. Think of it as a sponge that can hold up to 1,000 times its weight in water!</p>
+                <p>Hyaluronic Acid (HA) is a powerful, naturally occurring substance found in the skin. Its primary function is to **retain water**, helping your tissues stay well-lubricated and moist. Think of it as a sponge that can hold up to 1,000 times its weight in water! The body naturally produces HA, but production begins to decline with age, sun exposure, and pollution, which is why topical application is crucial for maintaining a youthful, plump complexion.</p>
                 
-                <h4>**The Key Benefits of HA:**</h4>
-                <ul>
-                    <li>**Intense Hydration:** Plumps the skin, visibly reducing the appearance of fine lines and wrinkles almost instantly.</li>
-                    <li>**Skin Barrier Support:** Helps strengthen the skin's barrier, protecting it from environmental pollutants and damage.</li>
-                    <li>**Improved Elasticity:** Restores a youthful bounce and suppleness to the skin.</li>
-                </ul>
-                <p>To use HA effectively, always apply it to **damp skin**, then immediately follow with a good moisturizer to lock the hydration in. This simple step ensures the molecule draws water into your skin, not out of it!</p>
+                <h4>**The Science of Deep Hydration**</h4>
+                <p>When applied topically, HA acts as a humectant—it draws moisture from the environment and the deeper layers of the skin to the surface (the epidermis). This intense surface hydration visibly plumps the skin, immediately smoothing out the look of fine lines and giving your face a dewy, glowing finish. This plumping effect also contributes to a firmer appearance, as the skin cells are well-hydrated and structured.</p>
+
+                <h4>**Beyond Plumping: Barrier and Protection**</h4>
+                <p>HA offers more than just superficial hydration. By maximizing the water content in the skin, it helps strengthen the skin's natural barrier. A healthy barrier is essential for defending against external aggressors like bacteria, irritants, and environmental pollutants. When the barrier is compromised, water escapes (leading to dehydration), and irritants get in (leading to sensitivity and redness). HA fortifies this protective layer, leading to less reactive and more resilient skin over time. It is also an excellent companion to other active ingredients (like Retinol or Vitamin C), as it buffers their potential drying effects while maximizing their benefits.</p>
+
+                <h4>**How to Use It Correctly for Maximum Effect**</h4>
+                <p>The golden rule for Hyaluronic Acid is to **always apply it to damp skin**. After cleansing or toning, leave your skin slightly wet, then immediately apply your HA serum. The serum needs moisture to draw from; if your skin is completely dry, the HA may pull moisture *out* of your skin in drier climates, which is counterproductive. Follow up the HA application with a good moisturizer to create an occlusive layer that 'locks' the hydration in place. Use it both morning and evening for 24/7 moisture support.</p>
             </article>
-            
+
             <hr>
 
             <article id="article-routine">
                 <h3 style="color: #8b5e3c;">🌙 The 5-Step Evening Routine for Ultimate Skin Renewal</h3>
-                <p>Nighttime is when your skin does its most important work: repair and regeneration. Following a consistent evening routine maximizes this natural process.</p>
+                <p>Nighttime is not just for sleeping; it’s when your skin performs its most vital functions: repair, regeneration, and restoration. During the day, your skin is in 'defense mode,' fighting off UV rays, pollution, and dirt. At night, it switches to 'repair mode,' working hard to heal damage and produce new collagen. By establishing a consistent evening routine, you maximize this natural healing process, leading to brighter, healthier, and more resilient skin when you wake up.</p>
                 
                 <ol>
-                    <li>**Double Cleanse (The Essential First Step):** Use an oil-based cleanser or micellar water to remove makeup, sunscreen, and pollution, followed by a gentle, water-based cleanser to truly clean the skin.</li>
-                    <li>**Tone & Balance:** A gentle, hydrating toner restores the skin's pH and prepares it to better absorb subsequent treatments.</li>
-                    <li>**Targeted Serum (The Power Shot):** Apply a treatment serum based on your needs (e.g., Vitamin C for brightening, Retinol for anti-aging, or a Hyaluronic Acid serum for intense hydration).</li>
-                    <li>**Eye Cream (The Delicate Touch):** Gently dab a specialized eye cream around the orbital bone to hydrate and address fine lines or dark circles.</li>
-                    <li>**Moisturize & Seal (The Lock-in):** Apply a richer night cream to seal in all the moisture and active ingredients, supporting the skin barrier as you sleep.</li>
+                    <li>**Step 1: Double Cleanse (The Foundation):** This step is non-negotiable. Start with an oil-based cleanser, balm, or micellar water to break down makeup, sunscreen, and excess sebum. Follow with a gentle, water-based cream or foam cleanser to wash away any residue. This two-step process ensures a truly clean canvas, allowing your treatment products to penetrate effectively.</li>
+                    <li>**Step 2: Tone & Balance:** Use a hydrating, alcohol-free toner to restore the skin's pH level and deliver an initial layer of hydration. Toners help ensure your skin is receptive to the active ingredients coming next. Pat it gently into the skin using your hands rather than a cotton pad to save product and minimize friction.</li>
+                    <li>**Step 3: Targeted Serum (The Power Shot):** This is where you address your primary skin concerns. This could be a Retinol serum to encourage cell turnover and minimize wrinkles, a peptide serum for firmness, or a Vitamin C derivative for brightening. Apply the serum to dry skin, allowing 5-10 minutes for it to fully absorb before moving to the next step.</li>
+                    <li>**Step 4: Eye Cream (The Delicate Touch):** The skin around your eyes is thinner and more delicate than the rest of your face, making it prone to fine lines and dehydration. Use a dedicated eye cream—not your face moisturizer—and gently dab a tiny amount around the orbital bone using your ring finger, which naturally applies the least pressure.</li>
+                    <li>**Step 5: Moisturize & Seal (The Lock-in):** Apply a richer, nourishing night cream or facial oil as the final step. This occlusive layer is crucial; it prevents Trans-Epidermal Water Loss (TEWL) during the night and seals in all the beneficial active ingredients you just applied, ensuring they work harder while you sleep.</li>
                 </ol>
-                <p>Consistency is key! Stick to this routine for a week and watch your skin transform.</p>
+                <p>Consistency is key! Stick to this routine for a week and watch your skin transform into a calmer, more luminous state.</p>
             </article>
 
             <hr>
 
             <article id="article-niacinamide">
-                <h3 style="color: #8b5e3c;">✨ The Power of Niacinamide: Your Multi-Tasking Skincare Ingredient</h3>
-                <p>Niacinamide, a form of Vitamin B3, is a powerhouse ingredient celebrated for its versatility and efficacy across almost all skin types. It's often hailed as the multi-tasker of the skincare world, capable of addressing several common skin concerns simultaneously. Unlike some potent ingredients, Niacinamide is gentle and works synergistically with other actives, making it easy to incorporate into both morning and evening routines. (Content continues...)</p>
-                <p>...Its primary benefit lies in its ability to **support the skin barrier function**. A strong barrier is crucial for locking in moisture and protecting the skin from environmental stressors like pollution and irritants. Niacinamide helps by boosting the production of ceramides, essential lipids that maintain the barrier's integrity....(Full article content from above goes here)... Consistent, daily use is key to seeing its profound long-term benefits.</p>
-                <p>*This is a 500-word article summary. Insert the full content here.*</p>
+                <h3 style="color: #8b5e3c;">✨ Niacinamide: Your Multi-Tasking Skincare Ingredient</h3>
+                <p>Niacinamide, a form of Vitamin B3, is a powerhouse ingredient celebrated for its versatility and efficacy across almost all skin types. It's often hailed as the multi-tasker of the skincare world, capable of addressing several common skin concerns simultaneously. Unlike some potent ingredients, Niacinamide is gentle and works synergistically with other actives, making it easy to incorporate into both morning and evening routines.</p>
+
+                <h4>**The Foundation: Barrier Repair**</h4>
+                <p>Niacinamide’s primary benefit lies in its ability to **support the skin barrier function**. A strong barrier is crucial for locking in moisture and protecting the skin from environmental stressors like pollution and irritants. Niacinamide helps by boosting the production of ceramides, essential lipids that maintain the barrier's integrity. By reinforcing this protective shield, Niacinamide leads to less water loss, resulting in skin that is better hydrated, less sensitive, and visibly healthier.</p>
+
+                <h4>**Targeting Pores, Oil, and Redness**</h4>
+                <p>For those struggling with oiliness and congestion, Niacinamide is a game-changer. It effectively helps **regulate sebum production**, meaning less excess oil on the skin's surface, which in turn leads to fewer clogged pores and a visible reduction in pore size over time. This makes it a fantastic addition to routines for those with acne-prone or combination skin. Furthermore, its **powerful anti-inflammatory properties** help calm the skin, dramatically reducing general redness, blotchiness, and post-inflammatory hyperpigmentation (PIH) left behind by old breakouts.</p>
+
+                <h4>**Anti-Aging and Brightening**</h4>
+                <p>As an antioxidant, Niacinamide combats free radical damage caused by UV exposure and pollution—the key drivers of premature aging. Regular use helps to improve skin elasticity and minimize the appearance of fine lines and wrinkles. When it comes to brightening, Niacinamide is a melanin inhibitor, meaning it slows down the transfer of pigment to the skin's surface, helping to fade existing dark spots, sun spots, and uneven skin tone, contributing to a brighter, more luminous complexion.</p>
+
+                <h4>**Incorporation into Your Routine**</h4>
+                <p>Look for serums or moisturizers containing Niacinamide in concentrations between 2% and 10%. Higher concentrations (10%+) are often used to target significant oiliness and large pores. It should be applied after cleansing and toning, but before heavier creams. Because it is non-acidic and well-tolerated, it pairs well with nearly all other ingredients, including Retinol and Vitamin C, enhancing their overall performance. Consistent, daily use is key to seeing its profound long-term benefits.</p>
             </article>
 
             <hr>
 
             <article id="article-barrier">
                 <h3 style="color: #8b5e3c;">🛡️ Understanding Your Skin Barrier: The Key to Lasting Health</h3>
-                <p>Your **skin barrier**, or stratum corneum, is the outermost layer of your skin. It functions much like a brick wall: the "bricks" are your skin cells (corneocytes), and the "mortar" is a mix of natural lipids, including ceramides, cholesterol, and fatty acids. This wall is the foundation of healthy, glowing skin. (Content continues...)</p>
-                <p>...The skin barrier performs two critical jobs: 1. **Keeps the Good Stuff In:** It prevents Trans-Epidermal Water Loss (TEWL), ensuring your skin stays hydrated, plump, and supple. 2. **Keeps the Bad Stuff Out:** It defends against allergens, bacteria, irritants, and environmental pollution....(Full article content from above goes here)... Consistent, gentle moisturizing is the fastest way to repair the mortar and rebuild the wall, leading to less irritation and a luminous glow.</p>
-                <p>*This is a 500-word article summary. Insert the full content here.*</p>
+                <p>Your **skin barrier**, or stratum corneum, is the outermost layer of your skin. It functions much like a brick wall: the "bricks" are your skin cells (corneocytes), and the "mortar" is a mix of natural lipids, including ceramides, cholesterol, and fatty acids. This wall is the foundation of healthy, glowing skin, and understanding its function is the single most important step in achieving long-term skin health.</p>
+
+                <h4>**The Dual Role of the Barrier**</h4>
+                <p>The skin barrier performs two critical jobs that define skin health:</p>
+                <ol>
+                    <li>**Keeps the Good Stuff In:** It is the primary mechanism for preventing Trans-Epidermal Water Loss (TEWL). By keeping water sealed within the skin, it ensures your skin stays hydrated, plump, and supple. Dehydrated, dull skin is almost always a sign of a compromised barrier.</li>
+                    <li>**Keeps the Bad Stuff Out:** It serves as a formidable defense against environmental aggressors, including allergens, bacteria, environmental pollution, and harsh chemicals. A strong barrier prevents these irritants from penetrating and causing inflammation or sensitivity.</li>
+                </ol>
+
+                <h4>**Signs of a Compromised Barrier**</h4>
+                <p>When the barrier is damaged—often due to over-exfoliation, using harsh stripping cleansers, overly hot water, or extreme weather—its dual function fails. Water escapes rapidly, and irritants penetrate easily. Signs of a compromised barrier include: persistent dryness and flakiness, tightness or stinging after cleansing, increased redness or sensitivity, and products that usually work fine suddenly causing burning or itching. If you suspect damage, immediate action is required to avoid chronic inflammation.</p>
+
+                <h4>**How to Restore and Protect It**</h4>
+                <p>The best strategy for barrier repair is **simplification and focused hydration**. Temporarily suspend the use of all potentially irritating active ingredients (like high-strength AHAs, Retinol, or strong Vitamin C). Focus entirely on gentle, soothing products. Introduce ingredients that are the exact building blocks for the barrier:</p>
+                <ul>
+                    <li>**Ceramides:** These are the key lipids needed to repair the "mortar" of the barrier wall.</li>
+                    <li>**Hyaluronic Acid:** Helps replenish the water content that was lost.</li>
+                    <li>**Squalane or other nourishing oils:** Provides essential fatty acids and lipids to smooth and protect the outer layer.</li>
+                </ul>
+                <p>Consistent, gentle moisturizing is the fastest way to repair the damage and rebuild a resilient skin barrier, leading to less irritation and a naturally luminous glow.</p>
             </article>
 
             <hr>
 
             <article id="article-exfoliation">
                 <h3 style="color: #8b5e3c;">🌸 Gentle Exfoliation: Unlocking Natural Radiance Without Irritation</h3>
-                <p>Exfoliation is essential for removing dead skin cells that dull your complexion and clog pores, but the approach you take matters immensely. Aggressive scrubbing or overly frequent use of strong chemical acids can easily lead to a damaged skin barrier and chronic irritation. **Gentle exfoliation** is the secret to achieving a sustainable, healthy glow. (Content continues...)</p>
-                <p>...**Chemical vs. Physical (And Which to Choose):** If you choose physical, opt for products with **very fine, smooth particles**... For chemical, look for **Poly Hydroxy Acids (PHAs)**, which are the gentlest....(Full article content from above goes here)... Always apply a broad-spectrum **sunscreen** the morning after using any chemical exfoliant, as they increase sun sensitivity.</p>
-                <p>*This is a 500-word article summary. Insert the full content here.*</p>
+                <p>Exfoliation is an essential component of any routine, responsible for removing dead skin cells that accumulate on the surface, dulling your complexion and clogging pores. When done correctly, it reveals the fresh, radiant skin underneath, allowing moisturizers and serums to penetrate better. However, the approach you take matters immensely. Aggressive scrubbing or overly frequent use of strong chemical acids can easily lead to a damaged skin barrier and chronic irritation. **Gentle exfoliation** is the secret to achieving a sustainable, healthy glow.</p>
+
+                <h4>**Choosing Your Exfoliation Method**</h4>
+                <p>Exfoliants fall into two main categories:</p>
+                <ul>
+                    <li>**Physical Exfoliants:** These use small grains, beads, or brushes to manually lift dead cells. If you choose this path, opt for products with **very fine, smooth, rounded particles** (like jojoba beads or oat powder) and use *minimal pressure*. Always avoid products with sharp, harsh ingredients like crushed nut shells or salts, as they cause micro-tears in the skin.</li>
+                    <li>**Chemical Exfoliants:** These use acids to dissolve the 'glue' that holds dead skin cells together. Instead of highly aggressive options, look for milder versions: **Poly Hydroxy Acids (PHAs)** like gluconolactone are the gentlest and best for sensitive skin because of their larger molecular structure, which means they penetrate slowly. **Lactic Acid (an AHA)** is another gentle option that exfoliates while providing hydration.</li>
+                </ul>
+
+                <h4>**The Golden Rules for Gentle Exfoliation**</h4>
+                <p>To keep your skin radiant and intact, follow these rules:</p>
+                <ol>
+                    <li>**Start Slow:** Begin with a maximum of 1-2 times a week. If your skin is sensitive, start with once every ten days.</li>
+                    <li>**Listen to Your Skin:** If you experience persistent redness, stinging, tightness, or peeling that lasts for more than a few hours, reduce the frequency or switch to a milder product.</li>
+                    <li>**Protect with Sunscreen:** Any form of exfoliation increases your skin's sun sensitivity. The morning after using a chemical or physical exfoliant, you **must** apply a broad-spectrum sunscreen of SPF 30 or higher to prevent damage and hyperpigmentation.</li>
+                    <li>**Avoid Mixing:** Do not apply a physical scrub and a chemical acid on the same night. Allow your skin time to recover.</li>
+                </ol>
+                <p>By treating your skin gently, you maintain a healthy barrier while achieving maximum radiance.</p>
             </article>
 
             <hr>
 
-            <article id="article-massage">
-                <h3 style="color: #8b5e3c;">💆‍♀️ The Benefits of Facial Massage: Your DIY Uplift</h3>
-                <p>Facial massage is more than just a luxurious treatment; it is a vital practice for boosting skin health and achieving a natural lift and glow. Incorporating a few minutes of massage into your routine, perhaps while cleansing or applying a facial oil, can yield significant benefits without the need for specialized equipment. (Content continues...)</p>
-                <p>...The primary advantage is **improved blood circulation**. Increased blood flow brings oxygen and nutrients to the skin's surface, resulting in a healthier, brighter complexion... Secondly, facial massage aids in **lymphatic drainage**....(Full article content from above goes here)... Regular facial massage helps release muscular tension that often contributes to the appearance of fine lines and gives a more sculpted, lifted appearance over time.</p>
-                <p>*This is a 500-word article summary. Insert the full content here.*</p>
-            </article>
-
-            <hr>
-
-            <article id="article-redness">
-                <h3 style="color: #8b5e3c;">🌿 Natural Remedies: Calming Redness and Sensitivity</h3>
-                <p>For those with reactive or sensitive skin, redness and inflammation can be a constant battle. The key to managing these issues is to **simplify your routine** and focus on ingredients known for their soothing, anti-inflammatory properties. Nature offers several powerful remedies that can help extinguish the fire on your skin. (Content continues...)</p>
-                <p>...**Top Calming Ingredients from Nature:** **Oatmeal**, **Chamomile and Calendula**, **Green Tea**, and **Centella Asiatica (Cica)** are highly effective at soothing sensitive skin and strengthening the skin barrier....(Full article content from above goes here)... Stick to a gentle cleanser, a soothing serum with one of the ingredients above, and a simple, fragrance-free moisturizer until the irritation subsides.</p>
-                <p>*This is a 500-word article summary. Insert the full content here.*</p>
-            </article>
-
-        </section>
+            </section>
     </div>
 
     <footer>
