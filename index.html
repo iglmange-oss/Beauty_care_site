@@ -3,81 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Beauty Care Products - Affiliate Site</title>
-    <link rel="stylesheet" href="style.css"> 
-    
+    <title>Glow & Harmony - Natural Beauty Care</title>
     <style>
-        /* Basic inline styles for example - use an external CSS file for a real website! */
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0 auto; max-width: 900px; padding: 20px; }
-        .product-section { border-bottom: 1px solid #eee; padding: 20px 0; margin-bottom: 30px; }
-        .link-block { text-align: center; margin-top: 50px; padding: 20px; background-color: #f9f9f9; border-radius: 10px; }
-        .link-block a { display: block; margin: 10px 0; padding: 10px; background-color: #ff9900; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
-        .link-block a:hover { background-color: #e68a00; }
-        .article-link { display: inline-block; margin-top: 10px; font-weight: bold; color: #007bff; text-decoration: none;}
-        .article-link:hover { text-decoration: underline; }
+        /* Basic CSS for a clean look - you can put this in a 'styles.css' file later */
+        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background-color: #f8f8f8; color: #333; }
+        header { background-color: #d8c2aa; color: white; padding: 20px 0; text-align: center; }
+        header h1 { margin: 0; font-size: 2.5em; letter-spacing: 2px; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        .container { width: 80%; margin: 20px auto; padding: 0 10px; }
+        .hero-image { width: 100%; height: 400px; object-fit: cover; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .article-section { display: flex; flex-wrap: wrap; justify-content: space-between; margin-top: 30px; }
+        .article-card { background-color: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); width: 48%; }
+        .article-card h3 { color: #8b5e3c; }
+        footer { text-align: center; padding: 20px; background-color: #d8c2aa; color: white; margin-top: 40px; }
+        @media (max-width: 768px) {
+            .container { width: 95%; }
+            .article-card { width: 100%; }
+        }
     </style>
 </head>
 <body>
 
-    <h1>Discover Your Next Favorite Beauty Product</h1>
-    <p>We've curated a list of top-rated items to help you look and feel your best. Check out the essentials below!</p>
+    <header>
+        <h1>Glow & Harmony</h1>
+        <p>Embrace Nature's Wisdom for Beautiful Skin</p>
+        <nav>
+            <a href="#home">HOME</a>
+            <a href="#articles">ARTICLES</a>
+            <a href="#about">ABOUT US</a>
+        </nav>
+    </header>
 
-    <section class="product-section">
-        <h2>[ARTICLE TITLE HERE] - The Ultimate Serum</h2>
-        <p>[SHORT PARAGRAPH ABOUT PRODUCT 1, focusing on its benefits.] This product is an absolute game-changer for hydration and glow. We especially love its non-greasy formula which makes it perfect for daily use under makeup.</p>
-        
-        <p>Ready to transform your routine? You can find this top-tier product right here: <a class="article-link" href="https://amzn.to/4oMeeDu" target="_blank">Shop The Ultimate Serum Now</a> (Link 1).</p>
-        
-        <p>For best results, pair it with a quality moisturizer. See the full range of benefits and ingredients on Amazon: <a class="article-link" href="https://amzn.to/4obFmMe" target="_blank">View Product Details</a> (Link 2).</p>
-    </section>
+    <div class="container" id="home">
+        <img src="images/natural-herbs.jpg" 
+             alt="A serene picture of natural herbs and plants in a sunlit garden, symbolizing natural beauty." 
+             class="hero-image">
 
-    <section class="product-section">
-        <h2>[ARTICLE TITLE HERE] - Nourishing Hair Mask</h2>
-        <p>[SHORT PARAGRAPH ABOUT PRODUCT 2, discussing how it repairs and shines.] After just one use, your hair will feel noticeably softer and stronger. Don't let dry, damaged hair hold you back!</p>
-        
-        <p>Get the look you deserve with this incredible mask. We've made it easy to buy it directly: <a class="article-link" href="https://amzn.to/49BJWyK" target="_blank">Buy the Nourishing Hair Mask</a> (Link 3).</p>
-        
-        <p>For deeper conditioning, leave it on for 20 minutes before rinsing. Read reviews and order here: <a class="article-link" href="https://amzn.to/4nvVsPC" target="_blank">Check Price on Amazon</a> (Link 4).</p>
-        
-        <p>This is a must-have for winter weather. <a class="article-link" href="https://amzn.to/3X4qfYW" target="_blank">Grab yours today!</a> (Link 5).</p>
-    </section>
+        <section id="articles">
+            <h2>✨ Latest Beauty Insights & Articles</h2>
+            
+            <div class="article-section">
+                <div class="article-card">
+                    <h3>Hyaluronic Acid: The Hydration Hero Your Skin Needs</h3>
+                    <p>Discover the science behind this powerful molecule and how it can instantly plump and smooth your complexion. Read the full article below!</p>
+                    <a href="#article-ha">Read More &raquo;</a>
+                </div>
 
-    <section class="product-section">
-        <h2>[ARTICLE TITLE HERE] - Long-Lasting Lipstick</h2>
-        <p>[SHORT PARAGRAPH ABOUT PRODUCT 3, focusing on its color and wear.] Finding a lipstick that lasts all day is tough, but this one delivers! The shade is universally flattering and the formula is non-drying.</p>
-        
-        <p>See all the available colors and get yours: <a class="article-link" href="https://amzn.to/49tzZn0" target="_blank">Explore Lipstick Shades</a> (Link 6).</p>
-        
-        <p>Perfect your pout! <a class="article-link" href="https://amzn.to/4hCNV09" target="_blank">Add this to your cart now</a> (Link 7). We guarantee you'll love the finish!</p>
-        
-        <p>For more application tips, check out this guide: <a class="article-link" href="https://amzn.to/49walhv" target="_blank">Learn More</a> (Link 8).</p>
-    </section>
-    
-    <section class="product-section">
-        <h2>[ARTICLE TITLE HERE] - Luxurious Body Butter</h2>
-        <p>[SHORT PARAGRAPH ABOUT PRODUCT 4, discussing texture and scent.] Treat your skin to this deeply moisturizing body butter. The scent is light, refreshing, and perfect for a post-shower ritual.</p>
-        
-        <p>Click here to indulge your skin: <a class="article-link" href="https://amzn.to/3Jwrn4D" target="_blank">Find the Body Butter</a> (Link 9).</p>
-        
-        <p>It's the ideal gift for any beauty lover. <a class="article-link" href="https://amzn.to/4hCIjCU" target="_blank">Purchase Today</a> (Link 10).</p>
-        
-        <p>Don't miss out on this fan favorite: <a class="article-link" href="https://amzn.to/48RdEj7" target="_blank">Shop Amazon</a> (Link 11).</p>
-    </section>
+                <div class="article-card">
+                    <h3>The 5-Step Evening Routine for Ultimate Skin Renewal</h3>
+                    <p>Unlock the secrets to letting your skin heal and regenerate while you sleep with our simple, effective nighttime guide. Read the full article below!</p>
+                    <a href="#article-routine">Read More &raquo;</a>
+                </div>
+            </div>
 
+            <hr>
 
-    <div class="link-block">
-        <h2>Don't Stop Your Beauty Journey!</h2>
-        <p>Explore more highly recommended products from our team:</p>
-        
-        <a href="https://amzn.to/4hAT9cV" target="_blank">Shop Our Top-Rated Face Wash (Link 12)</a>
-        <a href="https://amzn.to/4ntZ3O3" target="_blank">View Latest Deals on Makeup Brushes (Link 13)</a>
-        <a href="https://amzn.to/4hCRQdn" target="_blank">Discover Essential Sunscreen Protection (Link 14)</a>
-        <a href="https://amzn.to/3JEP8Yb" target="_blank">New Release: Collagen Supplements (Link 15)</a>
-        <a href="https://amzn.to/4nvPmig" target="_blank">Bestselling Eyeshadow Palette (Link 16)</a>
-        <a href="https://amzn.to/4oMGc1J" target="_blank">All Our Editor's Picks in One Place (Link 17)</a>
+            <article id="article-ha">
+                <h3 style="color: #8b5e3c;">🧪 Hyaluronic Acid: The Hydration Hero Your Skin Needs</h3>
+                <p>Hyaluronic Acid (HA) is a powerful, naturally occurring substance found in the skin. Its primary function is to **retain water**, helping your tissues stay well-lubricated and moist. Think of it as a sponge that can hold up to 1,000 times its weight in water!</p>
+                
+                <h4>**The Key Benefits of HA:**</h4>
+                <ul>
+                    <li>**Intense Hydration:** Plumps the skin, visibly reducing the appearance of fine lines and wrinkles almost instantly.</li>
+                    <li>**Skin Barrier Support:** Helps strengthen the skin's barrier, protecting it from environmental pollutants and damage.</li>
+                    <li>**Improved Elasticity:** Restores a youthful bounce and suppleness to the skin.</li>
+                </ul>
+                <p>To use HA effectively, always apply it to **damp skin**, then immediately follow with a good moisturizer to lock the hydration in. This simple step ensures the molecule draws water into your skin, not out of it!</p>
+            </article>
 
-        <p>Your support through these links helps us keep bringing you the best beauty content!</p>
+            <hr>
+
+            <article id="article-routine">
+                <h3 style="color: #8b5e3c;">🌙 The 5-Step Evening Routine for Ultimate Skin Renewal</h3>
+                <p>Nighttime is when your skin does its most important work: repair and regeneration. Following a consistent evening routine maximizes this natural process.</p>
+                
+                <ol>
+                    <li>**Double Cleanse (The Essential First Step):** Use an oil-based cleanser or micellar water to remove makeup, sunscreen, and pollution, followed by a gentle, water-based cleanser to truly clean the skin.</li>
+                    <li>**Tone & Balance:** A gentle, hydrating toner restores the skin's pH and prepares it to better absorb subsequent treatments.</li>
+                    <li>**Targeted Serum (The Power Shot):** Apply a treatment serum based on your needs (e.g., Vitamin C for brightening, Retinol for anti-aging, or a Hyaluronic Acid serum for intense hydration).</li>
+                    <li>**Eye Cream (The Delicate Touch):** Gently dab a specialized eye cream around the orbital bone to hydrate and address fine lines or dark circles.</li>
+                    <li>**Moisturize & Seal (The Lock-in):** Apply a richer night cream to seal in all the moisture and active ingredients, supporting the skin barrier as you sleep.</li>
+                </ol>
+                <p>Consistency is key! Stick to this routine for a week and watch your skin transform.</p>
+            </article>
+
+        </section>
     </div>
+
+    <footer>
+        <p>&copy; 2025 Glow & Harmony Beauty Site. All rights reserved. | <a href="#" style="color: white;">Privacy Policy</a></p>
+    </footer>
 
 </body>
 </html>
