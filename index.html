@@ -5,19 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glow & Harmony - Natural Beauty Care</title>
     <style>
-        /* Basic CSS for a clean look - you can put this in a 'styles.css' file later */
-        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background-color: #f8f8f8; color: #333; }
+        /* Basic CSS for a clean look - consider moving this to a 'styles.css' file */
+        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background-color: #f8f8f8; color: #333; line-height: 1.6; }
         header { background-color: #d8c2aa; color: white; padding: 20px 0; text-align: center; }
         header h1 { margin: 0; font-size: 2.5em; letter-spacing: 2px; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; transition: opacity 0.3s; }
+        nav a:hover { opacity: 0.8; }
         .container { width: 80%; margin: 20px auto; padding: 0 10px; }
-        .hero-image { width: 100%; height: 400px; object-fit: cover; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        .article-section { display: flex; flex-wrap: wrap; justify-content: space-between; margin-top: 30px; }
-        .article-card { background-color: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); width: 48%; }
-        .article-card h3 { color: #8b5e3c; }
+        .hero-image { 
+            width: 100%; 
+            height: 400px; 
+            object-fit: cover; 
+            margin-bottom: 30px; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+        }
+        .article-section { 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: space-between; 
+            margin-top: 30px; 
+        }
+        .article-card { 
+            background-color: white; 
+            padding: 20px; 
+            margin-bottom: 20px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
+            width: 31%; /* Adjusted for 3 cards per row */
+        }
+        .article-card h3 { color: #8b5e3c; font-size: 1.2em; }
+        article { 
+            background-color: white; 
+            padding: 30px; 
+            margin-bottom: 25px; 
+            border-left: 5px solid #d8c2aa;
+            border-radius: 0 8px 8px 0; 
+        }
+        h2 { border-bottom: 2px solid #8b5e3c; padding-bottom: 10px; color: #8b5e3c; }
+        article h3 { color: #8b5e3c; margin-top: 0; }
         footer { text-align: center; padding: 20px; background-color: #d8c2aa; color: white; margin-top: 40px; }
-        @media (max-width: 768px) {
+        
+        /* Media Query for smaller screens */
+        @media (max-width: 900px) {
             .container { width: 95%; }
+            .article-card { width: 48%; }
+        }
+        @media (max-width: 600px) {
             .article-card { width: 100%; }
         }
     </style>
@@ -29,12 +63,13 @@
         <p>Embrace Nature's Wisdom for Beautiful Skin</p>
         <nav>
             <a href="#home">HOME</a>
-            <a href="#articles">ARTICLES</a>
+            <a href="#articles">ALL ARTICLES</a>
             <a href="#about">ABOUT US</a>
         </nav>
     </header>
 
     <div class="container" id="home">
+        
         <img src="images/natural-herbs.jpg" 
              alt="A serene picture of natural herbs and plants in a sunlit garden, symbolizing natural beauty." 
              class="hero-image">
@@ -44,16 +79,47 @@
             
             <div class="article-section">
                 <div class="article-card">
-                    <h3>Hyaluronic Acid: The Hydration Hero Your Skin Needs</h3>
-                    <p>Discover the science behind this powerful molecule and how it can instantly plump and smooth your complexion. Read the full article below!</p>
+                    <h3>Hyaluronic Acid: The Hydration Hero</h3>
+                    <p>Discover the science behind this powerful molecule and how it can instantly plump your complexion.</p>
                     <a href="#article-ha">Read More &raquo;</a>
+                </div>
+                <div class="article-card">
+                    <h3>The 5-Step Evening Routine for Ultimate Renewal</h3>
+                    <p>Unlock the secrets to letting your skin heal and regenerate while you sleep with our guide.</p>
+                    <a href="#article-routine">Read More &raquo;</a>
                 </div>
 
                 <div class="article-card">
-                    <h3>The 5-Step Evening Routine for Ultimate Skin Renewal</h3>
-                    <p>Unlock the secrets to letting your skin heal and regenerate while you sleep with our simple, effective nighttime guide. Read the full article below!</p>
-                    <a href="#article-routine">Read More &raquo;</a>
+                    <h3>Niacinamide: Your Multi-Tasking Ingredient</h3>
+                    <p>Learn how Vitamin B3 strengthens your barrier, minimizes pores, and reduces redness.</p>
+                    <a href="#article-niacinamide">Read More &raquo;</a>
                 </div>
+                <div class="article-card">
+                    <h3>Understanding Your Skin Barrier</h3>
+                    <p>The foundation of healthy skin: why your barrier is the key to lasting health and glow.</p>
+                    <a href="#article-barrier">Read More &raquo;</a>
+                </div>
+                <div class="article-card">
+                    <h3>Gentle Exfoliation: Unlocking Natural Radiance</h3>
+                    <p>Achieve a brighter complexion without the irritation using safe, gentle methods.</p>
+                    <a href="#article-exfoliation">Read More &raquo;</a>
+                </div>
+                <div class="article-card">
+                    <h3>Facial Massage: Your DIY Uplift</h3>
+                    <p>Boost circulation and reduce puffiness with simple, effective facial massage techniques.</p>
+                    <a href="#article-massage">Read More &raquo;</a>
+                </div>
+                <div class="article-card">
+                    <h3>Natural Remedies: Calming Redness</h3>
+                    <p>Soothing ingredients like Oats and Cica to calm inflammation and highly sensitive skin.</p>
+                    <a href="#article-redness">Read More &raquo;</a>
+                </div>
+
+                <div class="article-card" style="width: 31%;"><h3>Future Article: Topic Idea 1</h3><p>Placeholder for more great content coming soon!</p><a href="#">Coming Soon</a></div>
+                <div class="article-card" style="width: 31%;"><h3>Future Article: Topic Idea 2</h3><p>Placeholder for more great content coming soon!</p><a href="#">Coming Soon</a></div>
+                <div class="article-card" style="width: 31%;"><h3>Future Article: Topic Idea 3</h3><p>Placeholder for more great content coming soon!</p><a href="#">Coming Soon</a></div>
+
+
             </div>
 
             <hr>
@@ -70,7 +136,7 @@
                 </ul>
                 <p>To use HA effectively, always apply it to **damp skin**, then immediately follow with a good moisturizer to lock the hydration in. This simple step ensures the molecule draws water into your skin, not out of it!</p>
             </article>
-
+            
             <hr>
 
             <article id="article-routine">
@@ -85,6 +151,51 @@
                     <li>**Moisturize & Seal (The Lock-in):** Apply a richer night cream to seal in all the moisture and active ingredients, supporting the skin barrier as you sleep.</li>
                 </ol>
                 <p>Consistency is key! Stick to this routine for a week and watch your skin transform.</p>
+            </article>
+
+            <hr>
+
+            <article id="article-niacinamide">
+                <h3 style="color: #8b5e3c;">✨ The Power of Niacinamide: Your Multi-Tasking Skincare Ingredient</h3>
+                <p>Niacinamide, a form of Vitamin B3, is a powerhouse ingredient celebrated for its versatility and efficacy across almost all skin types. It's often hailed as the multi-tasker of the skincare world, capable of addressing several common skin concerns simultaneously. Unlike some potent ingredients, Niacinamide is gentle and works synergistically with other actives, making it easy to incorporate into both morning and evening routines. (Content continues...)</p>
+                <p>...Its primary benefit lies in its ability to **support the skin barrier function**. A strong barrier is crucial for locking in moisture and protecting the skin from environmental stressors like pollution and irritants. Niacinamide helps by boosting the production of ceramides, essential lipids that maintain the barrier's integrity....(Full article content from above goes here)... Consistent, daily use is key to seeing its profound long-term benefits.</p>
+                <p>*This is a 500-word article summary. Insert the full content here.*</p>
+            </article>
+
+            <hr>
+
+            <article id="article-barrier">
+                <h3 style="color: #8b5e3c;">🛡️ Understanding Your Skin Barrier: The Key to Lasting Health</h3>
+                <p>Your **skin barrier**, or stratum corneum, is the outermost layer of your skin. It functions much like a brick wall: the "bricks" are your skin cells (corneocytes), and the "mortar" is a mix of natural lipids, including ceramides, cholesterol, and fatty acids. This wall is the foundation of healthy, glowing skin. (Content continues...)</p>
+                <p>...The skin barrier performs two critical jobs: 1. **Keeps the Good Stuff In:** It prevents Trans-Epidermal Water Loss (TEWL), ensuring your skin stays hydrated, plump, and supple. 2. **Keeps the Bad Stuff Out:** It defends against allergens, bacteria, irritants, and environmental pollution....(Full article content from above goes here)... Consistent, gentle moisturizing is the fastest way to repair the mortar and rebuild the wall, leading to less irritation and a luminous glow.</p>
+                <p>*This is a 500-word article summary. Insert the full content here.*</p>
+            </article>
+
+            <hr>
+
+            <article id="article-exfoliation">
+                <h3 style="color: #8b5e3c;">🌸 Gentle Exfoliation: Unlocking Natural Radiance Without Irritation</h3>
+                <p>Exfoliation is essential for removing dead skin cells that dull your complexion and clog pores, but the approach you take matters immensely. Aggressive scrubbing or overly frequent use of strong chemical acids can easily lead to a damaged skin barrier and chronic irritation. **Gentle exfoliation** is the secret to achieving a sustainable, healthy glow. (Content continues...)</p>
+                <p>...**Chemical vs. Physical (And Which to Choose):** If you choose physical, opt for products with **very fine, smooth particles**... For chemical, look for **Poly Hydroxy Acids (PHAs)**, which are the gentlest....(Full article content from above goes here)... Always apply a broad-spectrum **sunscreen** the morning after using any chemical exfoliant, as they increase sun sensitivity.</p>
+                <p>*This is a 500-word article summary. Insert the full content here.*</p>
+            </article>
+
+            <hr>
+
+            <article id="article-massage">
+                <h3 style="color: #8b5e3c;">💆‍♀️ The Benefits of Facial Massage: Your DIY Uplift</h3>
+                <p>Facial massage is more than just a luxurious treatment; it is a vital practice for boosting skin health and achieving a natural lift and glow. Incorporating a few minutes of massage into your routine, perhaps while cleansing or applying a facial oil, can yield significant benefits without the need for specialized equipment. (Content continues...)</p>
+                <p>...The primary advantage is **improved blood circulation**. Increased blood flow brings oxygen and nutrients to the skin's surface, resulting in a healthier, brighter complexion... Secondly, facial massage aids in **lymphatic drainage**....(Full article content from above goes here)... Regular facial massage helps release muscular tension that often contributes to the appearance of fine lines and gives a more sculpted, lifted appearance over time.</p>
+                <p>*This is a 500-word article summary. Insert the full content here.*</p>
+            </article>
+
+            <hr>
+
+            <article id="article-redness">
+                <h3 style="color: #8b5e3c;">🌿 Natural Remedies: Calming Redness and Sensitivity</h3>
+                <p>For those with reactive or sensitive skin, redness and inflammation can be a constant battle. The key to managing these issues is to **simplify your routine** and focus on ingredients known for their soothing, anti-inflammatory properties. Nature offers several powerful remedies that can help extinguish the fire on your skin. (Content continues...)</p>
+                <p>...**Top Calming Ingredients from Nature:** **Oatmeal**, **Chamomile and Calendula**, **Green Tea**, and **Centella Asiatica (Cica)** are highly effective at soothing sensitive skin and strengthening the skin barrier....(Full article content from above goes here)... Stick to a gentle cleanser, a soothing serum with one of the ingredients above, and a simple, fragrance-free moisturizer until the irritation subsides.</p>
+                <p>*This is a 500-word article summary. Insert the full content here.*</p>
             </article>
 
         </section>
