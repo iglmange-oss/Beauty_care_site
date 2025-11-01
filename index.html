@@ -11,6 +11,7 @@
         header h1 { margin: 0; font-size: 2.5em; letter-spacing: 2px; }
         nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
         .container { width: 85%; max-width: 1200px; margin: 20px auto; padding: 0 10px; }
+        
         /* Corrected image path for hero-image. Ensure natural-herbs.jpg is in the same folder as index.html */
         .hero-image { 
             width: 100%; 
@@ -27,6 +28,7 @@
             margin-bottom: 20px; 
             border-radius: 8px; 
             box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
+            /* Set consistent width for all cards */
             width: 31%; 
             transition: transform 0.3s;
         }
@@ -40,7 +42,8 @@
             border-radius: 0 8px 8px 0; 
         }
         h2 { border-bottom: 2px solid #d8c2aa; padding-bottom: 10px; color: #8b5e3c; margin-top: 40px;}
-        article h3 { color: #d8c2aa; margin-top: 0; }
+        /* Article H3 color changed back to harmonize with the header (now set in the specific article styles) */
+        article h3 { color: #8b5e3c; margin-top: 0; } 
         .amazon-link { 
             display: block; 
             background-color: #f7a072; 
@@ -67,6 +70,7 @@
             color: #8b5e3c;
         }
 
+        /* Responsive Design */
         @media (max-width: 900px) { .article-card { width: 48%; } }
         @media (max-width: 600px) { .article-card { width: 100%; } }
     </style>
@@ -90,51 +94,49 @@
 
         <section id="articles-list">
             <h2>📰 Explore Our Featured Articles</h2>
+            <hr>
             
             <div class="article-card-section">
                 <div class="article-card">
-                    <h3>The Squalane Solution: Hydration for Every Skin Type</h3>
+                    <h3>💧 The Squalane Solution: Hydration for Every Skin Type</h3>
                     <p>Discover the lightweight oil that mimics your skin's natural sebum for balanced hydration.</p>
                     <a href="https://amzn.to/4ojAqVP" class="link-in-card" target="_blank">🛒 Shop Products</a>
-                    <a href="#article-squalane">Read Full Article &raquo;</a>
+                    <a href="#article-squalane" class="link-in-card">Read Full Article &raquo;</a>
                 </div>
                 <div class="article-card">
-                    <h3>Vitamin C: The Ultimate Brightening Antioxidant</h3>
+                    <h3>☀️ Vitamin C: The Ultimate Brightening Antioxidant</h3>
                     <p>Learn why this powerhouse ingredient is essential for fighting aging and achieving luminosity.</p>
                     <a href="https://amzn.to/4qySr41" class="link-in-card" target="_blank">🛒 Shop Products</a>
-                    <a href="#article-vitaminc">Read Full Article &raquo;</a>
+                    <a href="#article-vitaminc" class="link-in-card">Read Full Article &raquo;</a>
                 </div>
                 <div class="article-card">
-                    <h3>Retinol Simplified: Starting Your Anti-Aging Journey Safely</h3>
+                    <h3>🌙 Retinol Simplified: Starting Your Anti-Aging Journey Safely</h3>
                     <p>A beginner's guide to integrating this gold-standard ingredient for cell turnover and smoothness.</p>
                     <a href="https://amzn.to/3JrZhYk" class="link-in-card" target="_blank">🛒 Shop Products</a>
-                    <a href="#article-retinol">Read Full Article &raquo;</a>
+                    <a href="#article-retinol" class="link-in-card">Read Full Article &raquo;</a>
                 </div>
                 <div class="article-card">
-                    <h3>The Hormonal Acne Handbook: Holistic Healing</h3>
+                    <h3>🩸 The Hormonal Acne Handbook: Holistic Healing</h3>
                     <p>Understanding and treating deep, painful breakouts through both topical care and lifestyle changes.</p>
                     <a href="https://amzn.to/3LhUFog" class="link-in-card" target="_blank">🛒 Shop Products</a>
-                    <a href="#article-hormonalacne">Read Full Article &raquo;</a>
+                    <a href="#article-hormonalacne" class="link-in-card">Read Full Article &raquo;</a>
                 </div>
                 <div class="article-card">
-                    <h3>Sustainable Beauty: Making Eco-Conscious Choices</h3>
+                    <h3>🌍 Sustainable Beauty: Making Eco-Conscious Choices</h3>
                     <p>How to build a skincare routine that is kind to your skin and the planet.</p>
                     <a href="https://amzn.to/48WOYG3" class="link-in-card" target="_blank">🛒 Shop Products</a>
-                    <a href="#article-sustainable">Read Full Article &raquo;</a>
+                    <a href="#article-sustainable" class="link-in-card">Read Full Article &raquo;</a>
                 </div>
-                    <h4>**Double Cleansing Benefits**</h4>
-    <p>Consistent double cleansing can lead to noticeably **brighter skin**, fewer breakouts, and a significant improvement in the appearance of pores, as they are kept clear of blockages. It is particularly beneficial at night, as it reverses the environmental exposure of the day and primes the skin for its nightly repair cycle, making the subsequent application of actives like Retinol or exfoliating acids much more effective.</p>
-</article>
-<div class="article-card" style="width: 31%;">
-    <h3>The Art of Double Cleansing</h3>
-    <p>The essential two-step process to perfectly clean, radiant skin that maximizes product absorption.</p>
-    <a href="https://amzn.to/48Y2XLF" class="link-in-card" target="_blank">🛒 Shop Oil Cleansers</a>
-    <a href="#article-doublecleanse">Read Full Article &raquo;</a>
-</div>
-                
-                <div class="article-card" style="width: 31%;"><h3>More Content Coming Soon!</h3><p>Stay tuned for more natural beauty insights.</p><a href="#">Stay Tuned</a></div>
+                <div class="article-card">
+                    <h3>✨ The Art of Double Cleansing</h3>
+                    <p>The essential two-step process to perfectly clean, radiant skin that maximizes product absorption.</p>
+                    <a href="https://amzn.to/48Y2XLF" class="link-in-card" target="_blank">🛒 Shop Oil Cleansers</a>
+                    <a href="#article-doublecleanse" class="link-in-card">Read Full Article &raquo;</a>
+                </div>
             </div>
         </section>
+
+        <hr>
 
         <section id="articles-content">
             <h2>📖 Full Article Content</h2>
@@ -182,48 +184,67 @@
                 <h4>**The Transformative Benefits**</h4>
                 <p>Retinol is a highly versatile ingredient that targets multiple concerns simultaneously: it smooths skin texture, minimizing the appearance of wrinkles and fine lines; it fades hyperpigmentation and sun damage by shedding older, damaged skin cells; and it helps clear pores by preventing dead skin cells from building up, making it effective for mild acne. This accelerated cell renewal process leads to skin that is visibly firmer, smoother, and clearer.</p>
 
-                <h4>**The Art of "Retinolization"**
-<article id="article-hormonalacne">
-    <a href="https://amzn.to/3LhUFog" class="amazon-link" target="_blank">Shop Recommended Salicylic Acid/AHA Cleansers on Amazon</a>
-    <h3 style="color: #8b5e3c;">🩸 The Hormonal Acne Handbook: Holistic Healing</h3>
-    <p>Hormonal acne is characterized by deep, painful, cystic breakouts that typically appear around the lower third of the face—the jawline, chin, and neck. Unlike adolescent acne, which is often surface-level, hormonal acne is tied to fluctuations in androgen levels, specifically around the menstrual cycle, periods of stress, or life transitions. Dealing with these deep, inflamed bumps requires a strategy that combines targeted topical treatments with holistic and internal care. Hormonal acne is a sign that your body's internal systems—endocrine, digestive, and stress responses—need attention, making a holistic approach not just beneficial, but necessary for long-term clearing.</p>
+                <h4>**The Art of "Retinolization"**</h4>
+                <p>This is the process of getting your skin used to the ingredient, which is essential to avoid the common side effects of dryness, redness, and peeling. Start by applying a **low concentration** (0.2% to 0.5%) just **once a week** for the first month. Gradually increase to twice a week, then three times a week, and eventually every other night, only moving up when your skin shows absolutely no signs of irritation. **Always apply Retinol at night** because it breaks down in sunlight, and it makes your skin more sensitive to the sun—**daily SPF** is non-negotiable when using Retinol.</p>
+            </article>
+            <hr>
 
-    <h4>**The Topical Strategy: Anti-Inflammatory Actives**</h4>
-    <p>The goal of topical treatment is to reduce inflammation and clear the blocked pores deep beneath the skin. The most effective ingredients are:</p>
-    <ul>
-        <li>**Salicylic Acid (BHA):** This is oil-soluble, allowing it to penetrate into the pore lining to dissolve excess sebum and dead skin cells, helping to prevent the cystic process from even starting. Using a BHA toner or serum can target the problem deep within the pore.</li>
-        <li>**Benzoyl Peroxide:** Excellent for killing the acne-causing bacteria ($P.\ acnes$) and reducing inflammation. Use it as a spot treatment to avoid drying out the entire face. Look for 2.5% or 5% concentrations, as higher percentages can be overly irritating without offering much extra benefit.</li>
-        <li>**Retinoids (prescription or over-the-counter):** As discussed, these speed up cell turnover, helping to push out clogs and prevent future blockages. Retinoids are particularly crucial for hormonal acne as they normalize cell growth within the follicle, reducing the formation of microcomedones which are the first stage of any breakout.</li>
-    </ul>
-    <p>Focus on gentle formulations to avoid further irritating the already inflamed area. Aggressive scrubbing will only worsen inflammation and can compromise the skin barrier, leading to secondary issues like dryness and increased sensitivity.</p>
+            <article id="article-hormonalacne">
+                <a href="https://amzn.to/3LhUFog" class="amazon-link" target="_blank">Shop Recommended Salicylic Acid/AHA Cleansers on Amazon</a>
+                <h3 style="color: #8b5e3c;">🩸 The Hormonal Acne Handbook: Holistic Healing</h3>
+                <p>Hormonal acne is characterized by deep, painful, cystic breakouts that typically appear around the lower third of the face—the jawline, chin, and neck. Unlike adolescent acne, which is often surface-level, hormonal acne is tied to fluctuations in androgen levels, specifically around the menstrual cycle, periods of stress, or life transitions. Dealing with these deep, inflamed bumps requires a strategy that combines targeted topical treatments with holistic and internal care. Hormonal acne is a sign that your body's internal systems—endocrine, digestive, and stress responses—need attention, making a holistic approach not just beneficial, but necessary for long-term clearing.</p>
 
-    <h4>**The Internal Approach: Diet and Lifestyle**</h4>
-    <p>Since the root cause is hormonal, addressing internal factors is vital. **Dietary changes** can significantly impact skin health. Consider reducing dairy and high-glycemic index foods (sugars and refined carbohydrates), which can trigger insulin spikes and subsequently androgen release, worsening acne. Focus on anti-inflammatory foods rich in Omega-3s (like fatty fish and flaxseeds). Manage stress through practices like meditation or regular exercise, as the stress hormone cortisol can also exacerbate breakouts by increasing oil production. Supplements like Zinc, Spearmint Tea, or Omega-3 fatty acids may help regulate inflammation and hormone balance, but should always be discussed with a doctor or dermatologist before starting to ensure they are right for your specific condition.</p>
-</article>
-<article id="article-sustainable">
-    <a href="https://amzn.to/48WOYG3" class="amazon-link" target="_blank">Shop Recommended Eco-Friendly Reusable Cotton Pads on Amazon</a>
-    <h3 style="color: #8b5e3c;">🌍 Sustainable Beauty: Making Eco-Conscious Choices</h3>
-    <p>The shift towards sustainable beauty is more than just a trend; it's an essential movement focused on reducing the environmental impact of our self-care routines. For those passionate about natural beauty, aligning your products with eco-conscious practices means looking beyond the ingredients to consider packaging, sourcing, and the brand's overall carbon footprint. Building a truly sustainable routine is a journey of continuous improvement, not perfection. Every consumer choice has a consequence, and opting for sustainability allows us to support brands that prioritize the planet's health alongside skin health.</p>
+                <h4>**The Topical Strategy: Anti-Inflammatory Actives**</h4>
+                <p>The goal of topical treatment is to reduce inflammation and clear the blocked pores deep beneath the skin. The most effective ingredients are:</p>
+                <ul>
+                    <li>**Salicylic Acid (BHA):** This is oil-soluble, allowing it to penetrate into the pore lining to dissolve excess sebum and dead skin cells, helping to prevent the cystic process from even starting. Using a BHA toner or serum can target the problem deep within the pore.</li>
+                    <li>**Benzoyl Peroxide:** Excellent for killing the acne-causing bacteria ($P.\ acnes$) and reducing inflammation. Use it as a spot treatment to avoid drying out the entire face. Look for 2.5% or 5% concentrations, as higher percentages can be overly irritating without offering much extra benefit.</li>
+                    <li>**Retinoids (prescription or over-the-counter):** As discussed, these speed up cell turnover, helping to push out clogs and prevent future blockages. Retinoids are particularly crucial for hormonal acne as they normalize cell growth within the follicle, reducing the formation of microcomedones which are the first stage of any breakout.</li>
+                </ul>
+                <p>Focus on gentle formulations to avoid further irritating the already inflamed area. Aggressive scrubbing will only worsen inflammation and can compromise the skin barrier, leading to secondary issues like dryness and increased sensitivity.</p>
 
-    <h4>**Beyond the Formula: Packaging and Sourcing**</h4>
-    <p>A key element of sustainable beauty is minimizing plastic waste. Look for brands that utilize **post-consumer recycled (PCR) plastic**, aluminum, glass, or biodegradable cardboard for their containers. Refillable systems are quickly becoming the gold standard, allowing you to reuse high-quality packaging indefinitely—this drastically cuts down on the energy required for manufacturing new containers. Crucially, investigate the brand’s **ingredient sourcing**. Are the ingredients wild-harvested responsibly, or are they mass-produced with heavy water usage? Prioritize ingredients that are ethically and sustainably harvested, such as Squalane derived from sugarcane or olives (a byproduct of existing industries), rather than those from unsustainable or threatened resources.</p>
+                <h4>**The Internal Approach: Diet and Lifestyle**</h4>
+                <p>Since the root cause is hormonal, addressing internal factors is vital. **Dietary changes** can significantly impact skin health. Consider reducing dairy and high-glycemic index foods (sugars and refined carbohydrates), which can trigger insulin spikes and subsequently androgen release, worsening acne. Focus on anti-inflammatory foods rich in Omega-3s (like fatty fish and flaxseeds). Manage stress through practices like meditation or regular exercise, as the stress hormone cortisol can also exacerbate breakouts by increasing oil production. Supplements like Zinc, Spearmint Tea, or Omega-3 fatty acids may help regulate inflammation and hormone balance, but should always be discussed with a doctor or dermatologist before starting to ensure they are right for your specific condition.</p>
+            </article>
+            <hr>
 
-    <h4>**The 'Less is More' Philosophy**</h4>
-    <p>The most sustainable beauty choice you can make is consuming less. Adopt a **"skinimalism"** approach, focusing on multi-tasking products (like a tinted SPF moisturizer or a cleanser that also gently exfoliates) rather than purchasing ten different single-function serums. This reduces overall packaging waste, saves money, and is often better for your skin barrier, which thrives on simplicity and fewer potential irritants. When you do purchase, buy from brands that are **Cruelty-Free** (Leaping Bunny certified is a good indicator) and transparent about their supply chain and manufacturing processes, including carbon neutrality efforts.</p>
+            <article id="article-sustainable">
+                <a href="https://amzn.to/48WOYG3" class="amazon-link" target="_blank">Shop Recommended Eco-Friendly Reusable Cotton Pads on Amazon</a>
+                <h3 style="color: #8b5e3c;">🌍 Sustainable Beauty: Making Eco-Conscious Choices</h3>
+                <p>The shift towards sustainable beauty is more than just a trend; it's an essential movement focused on reducing the environmental impact of our self-care routines. For those passionate about natural beauty, aligning your products with eco-conscious practices means looking beyond the ingredients to consider packaging, sourcing, and the brand's overall carbon footprint. Building a truly sustainable routine is a journey of continuous improvement, not perfection. Every consumer choice has a consequence, and opting for sustainability allows us to support brands that prioritize the planet's health alongside skin health.</p>
 
-    <h4>**Waste-Free Practices**</h4>
-    <p>Finally, focus on eliminating single-use items from your routine. Replace disposable cotton pads with reusable makeup removal rounds made from bamboo or cotton fabric, which can be washed and reused hundreds of times. Swap single-use sheet masks for powder or clay masks that you mix yourself. Instead of relying on makeup wipes (a major source of microplastic pollution), switch to a gentle double-cleansing process using your hands and a reusable washcloth. Every small, conscious decision, from choosing a shampoo bar over a bottled liquid shampoo to recycling your empties correctly, adds up to a significant positive impact on the environment.</p>
-</article>
+                <h4>**Beyond the Formula: Packaging and Sourcing**</h4>
+                <p>A key element of sustainable beauty is minimizing plastic waste. Look for brands that utilize **post-consumer recycled (PCR) plastic**, aluminum, glass, or biodegradable cardboard for their containers. Refillable systems are quickly becoming the gold standard, allowing you to reuse high-quality packaging indefinitely—this drastically cuts down on the energy required for manufacturing new containers. Crucially, investigate the brand’s **ingredient sourcing**. Are the ingredients wild-harvested responsibly, or are they mass-produced with heavy water usage? Prioritize ingredients that are ethically and sustainably harvested, such as Squalane derived from sugarcane or olives (a byproduct of existing industries), rather than those from unsustainable or threatened resources.</p>
 
-                <article id="article-doublecleanse">
-    <a href="https://amzn.to/48Y2XLF" class="amazon-link" target="_blank">Shop Recommended Oil Cleansers on Amazon</a>
-    <h3 style="color: #8b5e3c;">✨ The Art of Double Cleansing: The Korean Beauty Secret for Radiant Skin</h3>
-    <p>Double cleansing is the foundational practice of a truly effective skincare routine, originating from the meticulous Korean beauty tradition. It’s exactly what it sounds like: washing your face twice, but with two different types of cleansers. This method is essential for anyone who wears makeup, uses heavy sunscreen, or lives in an urban environment where pollution and grime build up on the skin's surface throughout the day. Skipping this step means your serums and moisturizers are trying to penetrate a layer of residue, significantly decreasing their effectiveness.</p>
-    
-    <h4>**Step 1: The Oil-Based Cleanse**</h4>
-    <p>The first step uses an **oil-based cleanser** (like a cleansing oil or balm). This cleanser is formulated to bind with and dissolve oil-soluble impurities. This includes makeup (even waterproof mascara), excess sebum, and—critically—chemical sunscreen. The principle is "like dissolves like." Massaging the oil cleanser into dry skin for at least 60 seconds allows it to completely emulsify these stubborn residues. When you add a splash of water, the oil cleanser turns milky and easily rinses away, taking the debris with it. This step effectively prevents congestion and prepares the pores.</p>
+                <h4>**The 'Less is More' Philosophy**</h4>
+                <p>The most sustainable beauty choice you can make is consuming less. Adopt a **"skinimalism"** approach, focusing on multi-tasking products (like a tinted SPF moisturizer or a cleanser that also gently exfoliates) rather than purchasing ten different single-function serums. This reduces overall packaging waste, saves money, and is often better for your skin barrier, which thrives on simplicity and fewer potential irritants. When you do purchase, buy from brands that are **Cruelty-Free** (Leaping Bunny certified is a good indicator) and transparent about their supply chain and manufacturing processes, including carbon neutrality efforts.</p>
 
-    <h4>**Step 2: The Water-Based Cleanse**</h4>
-    <p>The second step uses a **water-based cleanser** (like a foaming gel or gentle cream wash). The purpose of this step is not to remove makeup, but to cleanse the skin itself. It targets water-soluble debris like sweat, dirt, and any residual traces of the oil cleanser. This second wash ensures that the skin is perfectly clean, balanced, and ready to fully absorb the nourishing ingredients from your subsequent skincare products, such as toners and serums. Done correctly, double cleansing should not leave your skin feeling tight or stripped; rather, it should feel clean, soft, and balanced, preventing the overproduction of oil that often results from harsh cleansing.</p>
+                <h4>**Waste-Free Practices**</h4>
+                <p>Finally, focus on eliminating single-use items from your routine. Replace disposable cotton pads with reusable makeup removal rounds made from bamboo or cotton fabric, which can be washed and reused hundreds of times. Swap single-use sheet masks for powder or clay masks that you mix yourself. Instead of relying on makeup wipes (a major source of microplastic pollution), switch to a gentle double-cleansing process using your hands and a reusable washcloth. Every small, conscious decision, from choosing a shampoo bar over a bottled liquid shampoo to recycling your empties correctly, adds up to a significant positive impact on the environment.</p>
+            </article>
+            <hr>
 
+            <article id="article-doublecleanse">
+                <a href="https://amzn.to/48Y2XLF" class="amazon-link" target="_blank">Shop Recommended Oil Cleansers on Amazon</a>
+                <h3 style="color: #8b5e3c;">✨ The Art of Double Cleansing: The Korean Beauty Secret for Radiant Skin</h3>
+                <p>Double cleansing is the foundational practice of a truly effective skincare routine, originating from the meticulous Korean beauty tradition. It’s exactly what it sounds like: washing your face twice, but with two different types of cleansers. This method is essential for anyone who wears makeup, uses heavy sunscreen, or lives in an urban environment where pollution and grime build up on the skin's surface throughout the day. Skipping this step means your serums and moisturizers are trying to penetrate a layer of residue, significantly decreasing their effectiveness.</p>
+                
+                <h4>**Step 1: The Oil-Based Cleanse**</h4>
+                <p>The first step uses an **oil-based cleanser** (like a cleansing oil or balm). This cleanser is formulated to bind with and dissolve oil-soluble impurities. This includes makeup (even waterproof mascara), excess sebum, and—critically—chemical sunscreen. The principle is "like dissolves like." Massaging the oil cleanser into dry skin for at least 60 seconds allows it to completely emulsify these stubborn residues. When you add a splash of water, the oil cleanser turns milky and easily rinses away, taking the debris with it. This step effectively prevents congestion and prepares the pores.</p>
 
+                <h4>**Step 2: The Water-Based Cleanse**</h4>
+                <p>The second step uses a **water-based cleanser** (like a foaming gel or gentle cream wash). The purpose of this step is not to remove makeup, but to cleanse the skin itself. It targets water-soluble debris like sweat, dirt, and any residual traces of the oil cleanser. This second wash ensures that the skin is perfectly clean, balanced, and ready to fully absorb the nourishing ingredients from your subsequent skincare products, such as toners and serums. Done correctly, double cleansing should not leave your skin feeling tight or stripped; rather, it should feel clean, soft, and balanced, preventing the overproduction of oil that often results from harsh cleansing.</p>
+
+                <h4>**Double Cleansing Benefits**</h4>
+                <p>Consistent double cleansing can lead to noticeably **brighter skin**, fewer breakouts, and a significant improvement in the appearance of pores, as they are kept clear of blockages. It is particularly beneficial at night, as it reverses the environmental exposure of the day and primes the skin for its nightly repair cycle, making the subsequent application of actives like Retinol or exfoliating acids much more effective.</p>
+            </article>
+            <hr>
+
+            <div style="text-align: center; margin-top: 50px; padding-bottom: 20px; font-size: 0.9em; color: #666;">
+                &copy; 2025 Glow & Harmony. All rights reserved. | <a href="#" style="color: #8b5e3c;">Privacy Policy</a>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
