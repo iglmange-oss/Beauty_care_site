@@ -20,6 +20,8 @@
             margin-bottom: 30px; 
             border-radius: 8px; 
             box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+            /* Placeholder image link for consistency */
+            content: url('https://placehold.co/1200x400/d8c2aa/8b5e3c?text=Natural+Ingredients');
         }
         .article-card-section { display: flex; flex-wrap: wrap; justify-content: space-between; margin-top: 30px; }
         .article-card { 
@@ -28,7 +30,7 @@
             margin-bottom: 20px; 
             border-radius: 8px; 
             box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
-            /* Set consistent width for all cards */
+            /* Set consistent width for all cards, adjusted for potential 9-item layout */
             width: 31%; 
             transition: transform 0.3s;
         }
@@ -88,15 +90,18 @@
 
     <div class="container" id="home">
         
+        <!-- Using a placeholder image with the correct color scheme for reliability -->
         <img src="natural-herbs.jpg" 
              alt="A serene picture of natural herbs and plants in a sunlit garden, symbolizing natural beauty." 
-             class="hero-image">
+             class="hero-image"
+             onerror="this.onerror=null;this.src='https://placehold.co/1200x400/d8c2aa/8b5e3c?text=Natural+Ingredients';">
 
         <section id="articles-list">
             <h2>📰 Explore Our Featured Articles</h2>
             <hr>
             
             <div class="article-card-section">
+                <!-- Existing Articles 1-6 -->
                 <div class="article-card">
                     <h3>💧 The Squalane Solution: Hydration for Every Skin Type</h3>
                     <p>Discover the lightweight oil that mimics your skin's natural sebum for balanced hydration.</p>
@@ -133,6 +138,30 @@
                     <a href="https://amzn.to/48Y2XLF" class="link-in-card" target="_blank">🛒 Shop Oil Cleansers</a>
                     <a href="#article-doublecleanse" class="link-in-card">Read Full Article &raquo;</a>
                 </div>
+
+                <!-- New Article 7: Clean Beauty -->
+                <div class="article-card">
+                    <h3>🌿 The Shift to Clean, High-Performance Skincare</h3>
+                    <p>Skincare that delivers clinical results without compromising your health or the planet. Learn how to craft a sustainable ritual.</p>
+                    <a href="https://amzn.to/3K9fO2Z" class="link-in-card" target="_blank">🛒 Discover Products</a>
+                    <a href="#article-clean-beauty" class="link-in-card">Read Full Article &raquo;</a>
+                </div>
+
+                <!-- New Article 8: Haircare -->
+                <div class="article-card">
+                    <h3>💇‍♀️ High-End Haircare: Is the Splurge Worth It?</h3>
+                    <p>Decoding the price tag on luxury haircare: patented complexes, concentrated proteins, and rare oils for transformative results.</p>
+                    <a href="https://amzn.to/3S1rFpB" class="link-in-card" target="_blank">🛒 See Recommended Treatment</a>
+                    <a href="#article-haircare" class="link-in-card">Read Full Article &raquo;</a>
+                </div>
+
+                <!-- New Article 9: Sunscreen -->
+                <div class="article-card">
+                    <h3>🏖️ The Science of High-End Sunscreen: Daily Luxury & Protection</h3>
+                    <p>Advanced formulations that offer true broad-spectrum anti-aging defense and a sublime finish that layers flawlessly under makeup.</p>
+                    <a href="https://amzn.to/3O3pW1y" class="link-in-card" target="_blank">🛒 Find Invisible SPF</a>
+                    <a href="#article-sunscreen" class="link-in-card">Read Full Article &raquo;</a>
+                </div>
             </div>
         </section>
 
@@ -142,6 +171,7 @@
             <h2>📖 Full Article Content</h2>
             <hr>
             
+            <!-- Existing Article: Squalane -->
             <article id="article-squalane">
                 <a href="https://amzn.to/4ojAqVP" class="amazon-link" target="_blank">Shop Recommended Squalane Products on Amazon</a>
                 <h3 style="color: #8b5e3c;">💧 The Squalane Solution: Hydration for Every Skin Type</h3>
@@ -158,6 +188,7 @@
             </article>
             <hr>
 
+            <!-- Existing Article: Vitamin C -->
             <article id="article-vitaminc">
                 <a href="https://amzn.to/4qySr41" class="amazon-link" target="_blank">Shop Recommended Vitamin C Serums on Amazon</a>
                 <h3 style="color: #8b5e3c;">☀️ Vitamin C: The Ultimate Brightening Antioxidant</h3>
@@ -176,9 +207,10 @@
             </article>
             <hr>
 
+            <!-- Existing Article: Retinol -->
             <article id="article-retinol">
                 <a href="https://amzn.to/3JrZhYk" class="amazon-link" target="_blank">Shop Recommended Beginner Retinol Products on Amazon</a>
-                <h3 style="color: #8b5e3c;">🌙 Retinol Simplified: Starting Your Anti-Aging Journey Safely</h3>
+                <h3 style="color: #8b5e3c;">🌙 Retinol Simplified: Starting Your Anti-Aging Journey Safely </h3>
                 <p>Retinol is the gold-standard ingredient for anti-aging, widely recommended by dermatologists for its unmatched ability to transform skin texture and address signs of aging. Retinol is a Vitamin A derivative that, once absorbed by the skin, converts into Retinoic Acid. Retinoic Acid is the only compound scientifically proven to signal skin cells to behave younger, dramatically speeding up cell turnover and stimulating collagen production. However, because of its potency, starting Retinol requires a careful, methodical approach to avoid irritation.</p>
 
                 <h4>**The Transformative Benefits**</h4>
@@ -189,6 +221,7 @@
             </article>
             <hr>
 
+            <!-- Existing Article: Hormonal Acne -->
             <article id="article-hormonalacne">
                 <a href="https://amzn.to/3LhUFog" class="amazon-link" target="_blank">Shop Recommended Salicylic Acid/AHA Cleansers on Amazon</a>
                 <h3 style="color: #8b5e3c;">🩸 The Hormonal Acne Handbook: Holistic Healing</h3>
@@ -204,10 +237,11 @@
                 <p>Focus on gentle formulations to avoid further irritating the already inflamed area. Aggressive scrubbing will only worsen inflammation and can compromise the skin barrier, leading to secondary issues like dryness and increased sensitivity.</p>
 
                 <h4>**The Internal Approach: Diet and Lifestyle**</h4>
-                <p>Since the root cause is hormonal, addressing internal factors is vital. **Dietary changes** can significantly impact skin health. Consider reducing dairy and high-glycemic index foods (sugars and refined carbohydrates), which can trigger insulin spikes and subsequently androgen release, worsening acne. Focus on anti-inflammatory foods rich in Omega-3s (like fatty fish and flaxseeds). Manage stress through practices like meditation or regular exercise, as the stress hormone cortisol can also exacerbate breakouts by increasing oil production. Supplements like Zinc, Spearmint Tea, or Omega-3 fatty acids may help regulate inflammation and hormone balance, but should always be discussed with a doctor or dermatologist before starting to ensure they are right for your specific condition.</p>
+                <p>Since the root cause is hormonal, addressing internal factors is vital. **Dietary changes** can significantly impact skin health. Consider reducing dairy and high-glycemic index foods (ugars and refined carbohydrates), which can trigger insulin spikes and subsequently androgen release, worsening acne. Focus on anti-inflammatory foods rich in Omega-3s (like fatty fish and flaxseeds). Manage stress through practices like meditation or regular exercise, as the stress hormone cortisol can also exacerbate breakouts by increasing oil production. Supplements like Zinc, Spearmint Tea, or Omega-3 fatty acids may help regulate inflammation and hormone balance, but should always be discussed with a doctor or dermatologist before starting to ensure they are right for your specific condition.</p>
             </article>
             <hr>
 
+            <!-- Existing Article: Sustainable -->
             <article id="article-sustainable">
                 <a href="https://amzn.to/48WOYG3" class="amazon-link" target="_blank">Shop Recommended Eco-Friendly Reusable Cotton Pads on Amazon</a>
                 <h3 style="color: #8b5e3c;">🌍 Sustainable Beauty: Making Eco-Conscious Choices</h3>
@@ -224,6 +258,7 @@
             </article>
             <hr>
 
+            <!-- Existing Article: Double Cleanse -->
             <article id="article-doublecleanse">
                 <a href="https://amzn.to/48Y2XLF" class="amazon-link" target="_blank">Shop Recommended Oil Cleansers on Amazon</a>
                 <h3 style="color: #8b5e3c;">✨ The Art of Double Cleansing: The Korean Beauty Secret for Radiant Skin</h3>
@@ -239,6 +274,48 @@
                 <p>Consistent double cleansing can lead to noticeably **brighter skin**, fewer breakouts, and a significant improvement in the appearance of pores, as they are kept clear of blockages. It is particularly beneficial at night, as it reverses the environmental exposure of the day and primes the skin for its nightly repair cycle, making the subsequent application of actives like Retinol or exfoliating acids much more effective.</p>
             </article>
             <hr>
+
+            <!-- NEW Article 7: Clean Beauty -->
+            <article id="article-clean-beauty">
+                <a href="https://amzn.to/3K9fO2Z" class="amazon-link" target="_blank">Shop the Clean, High-Performance Skincare Product Mentioned in This Article on Amazon!</a>
+                <h3 style="color: #8b5e3c;">🌿 The Shift to Clean, High-Performance Skincare</h3>
+                <p>The world of luxury beauty has evolved. It’s no longer enough for a product to feel exquisite; it must also be **clean and non-toxic**. This article explores the rise of **high-performance clean beauty**—skincare that delivers clinical results without compromising your health or the planet. This movement is driven by informed consumers who demand full transparency and formulas free from parabens, phthalates, synthetic fragrances, and harsh sulphates. This ensures that their routine is a **non-toxic skincare** approach that still delivers visible, clinical-grade results.</p>
+                
+                <h4>**Formulation and Ethics**</h4>
+                <p>The essence of **high-performance clean beauty** lies in using ethically-sourced, potent botanical extracts, cutting-edge bio-engineered ingredients, and stabilized vitamins. These ingredients—such as responsibly harvested seaweeds, bio-fermented peptides, and pure, cold-pressed oils—are often more effective than their synthetic counterparts. They respect the skin’s delicate microbiome while providing targeted action against aging, dullness, or environmental stressors. By choosing these formulas, you are not just caring for your skin; you are participating in a **sustainable beauty ritual** that values ethical sourcing and eco-friendly packaging.</p>
+                
+                <h4>**The Guilt-Free Glow**</h4>
+                <p>Building a high-performance **clean beauty** routine means looking for ingredient lists that read like a wellness guide. Seek out products that are certified cruelty-free and feature fully traceable supply chains. This intentional selection elevates your daily regimen into a ritual that aligns with a holistic luxury lifestyle. For those ready to upgrade to a **clean luxury skincare** product that blends environmental consciousness with unparalleled results, the shift is transformative. You can achieve the highest standard of radiance without compromise.</p>
+            </article>
+            <hr>
+
+            <!-- NEW Article 8: Haircare -->
+            <article id="article-haircare">
+                <a href="https://amzn.to/3S1rFpB" class="amazon-link" target="_blank">Shop the Luxury Hair Repair Treatment Mentioned in This Article on Amazon!</a>
+                <h3 style="color: #8b5e3c;">💇‍♀️ Inside the World of High-End Haircare: Worth the Splurge?</h3>
+                <p>When is a $50 shampoo truly worth the investment? For too long, hair care has been treated as an afterthought, with the majority of the beauty budget going to skin. But healthy, luminous hair is a cornerstone of true beauty. The answer is a resounding yes—but only when you understand *why* you are paying a premium. The difference is not in the foam or the fragrance, but in the formulation. High-end brands invest heavily in R&D to develop proprietary protein complexes (like keratin peptides) and advanced bonding technology, making them far superior to drugstore products that often rely on cheap sulfates and silicones that only offer temporary surface smoothness.</p>
+                
+                <h4>**Concentration and Quality**</h4>
+                <p>The core benefit of **salon-quality hair products** is the concentration and quality of active ingredients. Unlike mass-market options that are often diluted, **high-end shampoo ingredients** like pure Argan Oil, Shea Butter, and amino acids are placed higher on the ingredient list. This means you use significantly less product per wash, making the item last much longer and ultimately justifying the higher initial cost. More importantly, these concentrated formulas are specifically designed to address deep-rooted hair issues, making them the most effective **best hair repair treatments** on the market, especially for color-treated or heat-damaged strands.</p>
+                
+                <h4>**Investing in Hair Health**</h4>
+                <p>To truly achieve a radiant, long-lasting glow, you must begin **investing in hair health**. Luxury serums, masks, and oils not only repair the damage done but also act as a shield against future heat, pollution, and mechanical stress. Look for brands that focus on scalp health, as the foundation of beautiful hair begins at the root. When you choose a high-end product, you are buying a long-term solution that strengthens the hair's internal structure, resulting in less breakage, better shine, and improved color longevity. Stop masking damage and start repairing it with a true luxury treatment.</p>
+            </article>
+            <hr>
+
+            <!-- NEW Article 9: Sunscreen (Completed the truncated content) -->
+            <article id="article-sunscreen">
+                <a href="https://amzn.to/3O3pW1y" class="amazon-link" target="_blank">Find the featured Luxury Daily SPF on Amazon!</a>
+                <h3 style="color: #8b5e3c;">🏖️ The Science of High-End Sunscreen: Daily Luxury and Protection</h3>
+                <p>Dermatologists agree: the best anti-aging product is **sunscreen**. But consistent application hinges on texture, which is where **high-end sunscreen** shines. Luxury brands have mastered the formulation challenges, moving beyond the chalky, heavy zinc oxides of the past to create elegant, weightless textures that feel like a high-quality moisturizer or primer. This is the **daily luxury SPF** ritual that makes application a pleasure, not a chore.</p>
+
+                <h4>**Beyond UV Filters: Skincare Benefits**</h4>
+                <p>The difference lies in the ingredients they pair with the filters. Unlike basic sunscreens, high-end formulas are truly a **sunscreen with skincare benefits**. They often include advanced antioxidants (like Ferulic Acid, Vitamin E, and specialized botanical extracts) to combat free radical damage from pollution and blue light—damage that standard SPF alone cannot fully prevent. Furthermore, many luxury SPFs contain hydrating ingredients like Hyaluronic Acid and Niacinamide, transforming your daily ritual into a comprehensive **broad-spectrum anti-aging** defense system.</p>
+
+                <h4>**The Invisible Finish**</h4>
+                <p>A major barrier to consistent sunscreen use is the white cast, especially on deeper skin tones, and the tendency for pilling under makeup. Premium brands overcome this by micronizing mineral filters or using innovative chemical filters that are invisible upon application. This makes the product a true final step in your morning routine, providing a perfect base that doesn't interfere with subsequent makeup application. Choosing a high-end, invisible formula ensures you get superior protection and a finish that makes you *want* to apply it every day, making the investment worthwhile for long-term skin health.</p>
+            </article>
+            <hr>
 
             <div style="text-align: center; margin-top: 50px; padding-bottom: 20px; font-size: 0.9em; color: #666;">
                 &copy; 2025 Glow & Harmony. All rights reserved. | <a href="#" style="color: #8b5e3c;">Privacy Policy</a>
