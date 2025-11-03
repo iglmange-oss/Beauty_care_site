@@ -3,257 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GlowByDesignLR - The Luxury Beauty Blog</title>
+    <title>Affiliate Content Hub</title>
+    <!-- Load Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom styles for a clean, modern aesthetic */
+        /* Custom font import for a cleaner look */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f7f7f7;
-            line-height: 1.6;
+            background-color: #f7f9fb;
         }
-
-        .header-section {
-            background-color: #333;
-            color: #fff;
-            padding: 1.5rem 0;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        /* Style for the button */
+        .article-button {
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
         }
-
-        .blog-article {
-            background-color: #fff;
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
-        }
-        
-        .blog-article:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-
-        .article-preview h2 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #4a5568;
-            margin-bottom: 0.5rem;
-        }
-
-        .full-article h3 {
-            font-size: 1.875rem;
-            font-weight: 800;
-            color: #2d3748;
-            margin-bottom: 1rem;
-        }
-
-        .read-more-btn, .hide-article-btn {
-            background-color: #c084fc; /* Tailwind purple-400 */
-            color: #fff;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: background-color 0.2s;
-            margin-top: 1rem;
-        }
-
-        .read-more-btn:hover, .hide-article-btn:hover {
-            background-color: #a855f7; /* Tailwind purple-500 */
-        }
-        
-        .amazon-link, .amazon-link-full {
-            color: #f59e0b; /* Tailwind amber-500 */
-            font-weight: 600;
-            text-decoration: underline;
-        }
-        
-        .amazon-link-full {
-            display: block;
-            margin-top: 1.5rem;
-            padding: 0.75rem 1.25rem;
-            text-align: center;
-            background-color: #10b981; /* Tailwind emerald-500 */
-            color: #fff;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: background-color 0.2s;
-        }
-        
-        .amazon-link-full:hover {
-            background-color: #059669; /* Tailwind emerald-600 */
-        }
-        
-        /* Ensure the articles flow nicely on mobile */
-        @media (max-width: 640px) {
-            .blog-article {
-                margin-bottom: 1.5rem;
-                padding: 1rem;
-            }
-            .article-preview h2 {
-                font-size: 1.25rem;
-            }
+        .article-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+            background-color: #059669; /* Darker green on hover */
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header class="header-section">
-        <div class="max-w-4xl mx-auto px-4">
-            <h1 class="text-3xl font-extrabold tracking-tight">GlowByDesignLR</h1>
-            <p class="text-sm font-light mt-1">Curating the best in luxury beauty and skincare.</p>
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-800">Your Affiliate Hub</h1>
+            <nav>
+                <a href="#" class="text-gray-600 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                <a href="#articles" class="text-gray-600 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Articles</a>
+            </nav>
         </div>
     </header>
 
     <!-- Main Content Area -->
-    <main class="max-w-4xl mx-auto px-4 py-8">
-        <h2 class="text-2xl font-bold text-gray-800 mb-6">Latest Insights on Luxury Skincare & Makeup</h2>
-        
-        <div id="articles-container">
-            <!-- ARTICLE 1: Mock Article for Structure -->
-            <article id="article1" class="blog-article">
-                <div class="article-preview">
-                    <h2>The Essential 5-Step Luxury Skincare Routine</h2>
-                    <p class="preview-text">A guide to building a results-driven regimen. Focus on **cleansing**, **treatment**, and **hydration** for lasting radiance. <a href="https://amzn.to/3O3pW1y" target="_blank" class="amazon-link">Shop the best Cleansing Balm!</a></p>
-                    <button class="read-more-btn" onclick="showFullArticle(1)">Read More</button>
-                </div>
-                <div class="full-article" style="display:none;">
-                    <h3>The Essential 5-Step Luxury Skincare Routine</h3>
-                    <p>The foundation of luminous skin lies in a consistent routine. We break down the five crucial steps: **Double Cleansing**, **Toning/Essence**, **Serum Application**, **Eye Care**, and finally, **Moisturization**. Each step plays a vital role in preparing the skin to receive active ingredients and locking in hydration.</p>
-                    <p>True **luxury skincare** focuses on high-quality ingredient sourcing and delivery systems. When selecting products, prioritize concentrated serums with proven actives like Vitamin C or Peptides. This focused approach ensures that your skin receives maximum benefit without unnecessary fillers, leading to visible, transformative results.</p>
-                    <a href="https://amzn.to/3O3pW1y" target="_blank" class="amazon-link-full">Shop the Best Vitamin C Serum for Daily Glow on Amazon!</a>
-                    <button class="hide-article-btn" onclick="hideFullArticle(1)">Show Less</button>
-                </div>
-            </article>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
-            <!-- ARTICLE 2: Mock Article for Structure -->
-            <article id="article2" class="blog-article">
-                <div class="article-preview">
-                    <h2>Why Retinol is the Gold Standard in Anti-Aging</h2>
-                    <p class="preview-text">Understanding the power of **Vitamin A derivatives** and how to incorporate **retinoids** without irritation. **Age gracefully with Retinol.** <a href="https://amzn.to/3O3pW1y" target="_blank" class="amazon-link">Find our recommended gentle Retinol cream!</a></p>
-                    <button class="read-more-btn" onclick="showFullArticle(2)">Read More</button>
-                </div>
-                <div class="full-article" style="display:none;">
-                    <h3>Why Retinol is the Gold Standard in Anti-Aging</h3>
-                    <p>Retinol, a form of Vitamin A, is scientifically proven to boost cellular turnover and stimulate **collagen production**. This makes it an indispensable tool for tackling fine lines, wrinkles, and texture irregularities. We discuss the different forms of **retinoids**—from gentle retinyl palmitate to potent tretinoin—and how to choose the right strength for your skin.</p>
-                    <p>Start slowly, using it only a few nights a week, and always pair it with a deeply hydrating moisturizer to minimize the risk of dryness or flaking. Patience is key; visible results take consistent use over several months. This dedication will transform your skin, revealing a smoother, firmer, and more youthful complexion.</p>
-                    <a href="https://amzn.to/3O3pW1y" target="_blank" class="amazon-link-full">Shop the Recommended Gentle Retinol on Amazon!</a>
-                    <button class="hide-article-btn" onclick="hideFullArticle(2)">Show Less</button>
-                </div>
-            </article>
+        <!-- Introduction Section -->
+        <section class="text-center mb-10">
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-4" id="articles">Latest Product Guides & Reviews</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">Discover the best products Amazon has to offer. Click the links below to read our full reviews and support the site!</p>
+        </section>
 
-            <!-- ARTICLE 3: Mock Article for Structure -->
-            <article id="article3" class="blog-article">
-                <div class="article-preview">
-                    <h2>Hydration Heroes: Hyaluronic Acid vs. Ceramides</h2>
-                    <p class="preview-text">A comparison of two heavy hitters in hydration. One attracts moisture, the other locks it in. Learn which one your skin needs most. <a href="https://amzn.to/3O3pW1y" target="_blank" class="amazon-link">Shop the Ultra-Hydrating Duo on Amazon!</a></p>
-                    <button class="read-more-btn" onclick="showFullArticle(3)">Read More</button>
+        <!-- Article Grid (11 Articles) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="article-list">
+            
+            <!-- Article 1 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+                <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/10b981/ffffff?text=Article+1+Image" alt="Placeholder image for article 1">
+                <div class="p-6">
+                    <h3 class="font-semibold text-xl text-gray-900 mb-2">The Ultimate Guide to Noise-Cancelling Headphones</h3>
+                    <p class="text-gray-600 text-sm mb-4">A deep dive into the top 5 models for travel and focus in 2024. Find out which pair is right for you and your budget.</p>
+                    <a href="#affiliate-link-1" class="article-button inline-block bg-green-500 text-white font-medium py-2 px-4 rounded-lg text-center w-full">
+                        Read Article &rarr;
+                    </a>
                 </div>
-                <div class="full-article" style="display:none;">
-                    <h3>Hydration Heroes: Hyaluronic Acid vs. Ceramides</h3>
-                    <p>While often used interchangeably, **Hyaluronic Acid (HA)** and **Ceramides** serve different, yet complementary, functions in skincare. HA is a humectant, meaning it draws moisture from the atmosphere and deeper layers of the skin, plumping the surface. Ceramides, conversely, are lipids that naturally occur in the skin barrier, acting like a 'mortar' to prevent water loss (transepidermal water loss or TEWL).</p>
-                    <p>For most skin types, using both is the optimal strategy: apply an HA serum to draw moisture into the skin, followed by a ceramide-rich moisturizer to seal that moisture in. This dual-action approach ensures maximum hydration, elasticity, and barrier function health.</p>
-                    <a href="https://amzn.to/3O3pW1y" target="_blank" class="amazon-link-full">Shop the Ultra-Hydrating Duo on Amazon!</a>
-                    <button class="hide-article-btn" onclick="hideFullArticle(3)">Show Less</button>
-                </div>
-            </article>
+            </div>
 
-            <!-- ARTICLE 10: New Article from User Input -->
-            <article id="article10" class="blog-article">
-                <div class="article-preview">
-                    <h2> The Science of High-End Sunscreen: Daily Luxury and Protection</h2>
-                    <p class="preview-text">Forget the chalky, greasy formulas of the past. **High-end sunscreen** is the new cornerstone of luxury anti-aging. This article reveals how advanced formulations offer true **broad-spectrum anti-aging** defense and a sublime finish that layers flawlessly under makeup. Discover the **sunscreen with skincare benefits** that makes daily application a **daily luxury SPF** ritual, not a chore. **See our favorite invisible SPF formula!**
-                        <a href="https://amzn.to/3O3pW1y" target="_blank" class="amazon-link">Find the featured Luxury Daily SPF on Amazon!</a>
-                    </p>
-                    <button class="read-more-btn" onclick="showFullArticle(10)">Read More</button>
+            <!-- Article 2 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+                <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/059669/ffffff?text=Article+2+Image" alt="Placeholder image for article 2">
+                <div class="p-6">
+                    <h3 class="font-semibold text-xl text-gray-900 mb-2">Review: The Smart Home Assistant That Does Everything</h3>
+                    <p class="text-gray-600 text-sm mb-4">We tested the newest AI hub to see if it truly lives up to the hype and integrates seamlessly with other devices.</p>
+                    <a href="#affiliate-link-2" class="article-button inline-block bg-green-500 text-white font-medium py-2 px-4 rounded-lg text-center w-full">
+                        Read Article &rarr;
+                    </a>
                 </div>
-                <div class="full-article" style="display:none;">
-                    <h3>The Science of High-End Sunscreen: Daily Luxury and Protection</h3>
-                    <p>Dermatologists agree: the best anti-aging product is **sunscreen**. But consistent application hinges on texture, which is where **high-end sunscreen** shines. Luxury brands have mastered the formulation science, eliminating the heavy, white cast often associated with mineral filters (Zinc Oxide and Titanium Dioxide). They achieve this using micronized particles or advanced chemical filters that are photostable, highly effective, and designed to wear like a primer, making it a true **best invisible sunscreen** and an essential step in your **daily luxury SPF** routine.</p>
-                    
-                    <p>Investing in a high-end formula means receiving superior protection, specifically **broad-spectrum anti-aging** defense. This goes beyond the SPF number (which measures UVB protection) to include robust UVA defense, often indicated by PA ratings or high levels of critical filters. More than just UV blockers, the best products are a true **sunscreen with skincare benefits**, infused with antioxidants like Vitamin C, Vitamin E, and Niacinamide. These ingredients neutralize free radicals generated by environmental aggressors (pollution, blue light) that slip past the UV filters, offering a comprehensive, 360-degree shield against aging.</p>
-                    
-                    <p>The commitment to quality ingredients ensures that even sensitive or acne-prone skin can tolerate daily use. The elevated feel transforms the necessary chore of protection into a moment of pleasure—a **daily luxury SPF** ritual. This psychological element is key; the better the texture, the more likely you are to apply it correctly and consistently, guaranteeing long-term protection against photoaging, hyperpigmentation, and collagen breakdown. Don't compromise your skin health—make your daily SPF your most luxurious skincare choice. **Protect your glow today!**</p>
-                    <a href="https://amzn.to/3O3pW1y" target="_blank" class="amazon-link-full">Shop the Luxury Invisible Sunscreen Mentioned in This Article on Amazon!</a>
-                    <button class="hide-article-btn" onclick="hideFullArticle(10)">Show Less</button>
-                </div>
-            </article>
+            </div>
 
-            <!-- ARTICLE 11: New Article from User Input -->
-            <article id="article11" class="blog-article">
-                <div class="article-preview">
-                    <h2> The Perfect Base: Why High-End Primers Elevate Your Makeup</h2>
-                    <p class="preview-text">A flawless, long-lasting makeup look starts with the right foundation—and we don't mean the liquid kind. A **high-end makeup primer** acts as the crucial **skincare-makeup bridge**, creating an invisible canvas that blurs pores and locks down your look. **GlowByDesignLR** explains why investing in a **primer with skincare benefits** is the secret to true **makeup longevity**. Stop caking and start gliding. **Discover the multi-tasking base product we can't live without!**
-                        <a href="https://amzn.to/3O3pW1y" target="_blank" class="amazon-link">See the recommended Primer/Base on Amazon!</a>
-                    </p>
-                    <button class="read-more-btn" onclick="showFullArticle(11)">Read More</button>
+            <!-- Article 3 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+                <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/065f46/ffffff?text=Article+3+Image" alt="Placeholder image for article 3">
+                <div class="p-6">
+                    <h3 class="font-semibold text-xl text-gray-900 mb-2">10 Kitchen Gadgets Under $50 You Need Right Now</h3>
+                    <p class="text-gray-600 text-sm mb-4">Affordable tools that will revolutionize your meal prep and save you time every single week. A must-read for chefs!</p>
+                    <a href="#affiliate-link-3" class="article-button inline-block bg-green-500 text-white font-medium py-2 px-4 rounded-lg text-center w-full">
+                        Read Article &rarr;
+                    </a>
                 </div>
-                <div class="full-article" style="display:none;">
-                    <h3>The Perfect Base: Why High-End Primers Elevate Your Makeup</h3>
-                    <p>The quest for a truly seamless foundation application ends with a high-quality primer. More than just a simple barrier, the **best high-end makeup primer** is a sophisticated formula designed to optimize your skin's surface texture. Luxury brands utilize specialized polymers and optical diffusers to instantly achieve a **pore-blurring luxury primer** effect, filling in fine lines and imperfections so foundation glides over them, rather than settling in and accentuating flaws. This smoothing action is the fundamental difference between a look that fades mid-day and one that maintains its fresh, professional finish for hours.</p>
-                    
-                    <p>A true luxury primer acts as the essential **skincare-makeup bridge**. Modern, high-end formulas are infused with potent actives, making them a genuine **primer with skincare benefits**. Look for ingredients like Hyaluronic Acid for sustained hydration, Niacinamide to balance oil production and calm redness, or powerful antioxidants to protect against environmental stressors. By locking in your skincare and creating a breathable, yet firm, layer before makeup, these formulas actively contribute to skin health while serving as a ‘glue’ for your foundation. This is the secret to superior **makeup longevity** and prevents the common midday woes of creasing and separating.</p>
-                    
-                    <p>For the **GlowByDesignLR** client, a primer is a non-negotiable step that personalizes the base routine. Whether you choose a mattifying formula to control shine in the T-zone or a hydrating, illuminating one to combat dryness and add a subtle glow, a tailored **pore-blurring luxury primer** dramatically improves the aesthetic quality of your final look. It ensures that the color and finish of your foundation remain true all day, saving you the time and frustration of constant touch-ups. Treat your base as the foundation of your confidence, and elevate your entire makeup game with a primer that works as hard as you do. **Upgrade your base, upgrade your glow!**</p>
-                    <a href="https://amzn.to/3O3pW1y" target="_blank" class="amazon-link-full">Shop the Luxury Multi-Tasking Primer/Base Mentioned in This Article on Amazon!</a>
-                    <button class="hide-article-btn" onclick="hideFullArticle(11)">Show Less</button>
-                </div>
-            </article>
+            </div>
 
-            <!-- Note: I am assuming the previous articles 4 through 9 were similar placeholder/mock content. I am not including them here to keep the file size manageable and focus on the structural integrity around the new articles 10 and 11. If you had specific content for 4-9, please provide it! -->
+            <!-- Article 4 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+                <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/10b981/ffffff?text=Article+4+Image" alt="Placeholder image for article 4">
+                <div class="p-6">
+                    <h3 class="font-semibold text-xl text-gray-900 mb-2">Best Laptops for College Students (Budget Edition)</h3>
+                    <p class="text-gray-600 text-sm mb-4">Choosing a powerful yet affordable machine doesn't have to be hard. We break down the top three choices for studying.</p>
+                    <a href="#affiliate-link-4" class="article-button inline-block bg-green-500 text-white font-medium py-2 px-4 rounded-lg text-center w-full">
+                        Read Article &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <!-- Article 5 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+                <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/059669/ffffff?text=Article+5+Image" alt="Placeholder image for article 5">
+                <div class="p-6">
+                    <h3 class="font-semibold text-xl text-gray-900 mb-2">In-Depth Guide to Home Security Cameras</h3>
+                    <p class="text-gray-600 text-sm mb-4">Comparing features, installation difficulty, and subscription costs for the most popular wireless security systems.</p>
+                    <a href="#affiliate-link-5" class="article-button inline-block bg-green-500 text-white font-medium py-2 px-4 rounded-lg text-center w-full">
+                        Read Article &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <!-- Article 6 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+                <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/065f46/ffffff?text=Article+6+Image" alt="Placeholder image for article 6">
+                <div class="p-6">
+                    <h3 class="font-semibold text-xl text-gray-900 mb-2">Top 5 Books on Personal Finance to Read This Year</h3>
+                    <p class="text-gray-600 text-sm mb-4">Start your journey to financial freedom with these highly-rated and recommended reads from leading experts.</p>
+                    <a href="#affiliate-link-6" class="article-button inline-block bg-green-500 text-white font-medium py-2 px-4 rounded-lg text-center w-full">
+                        Read Article &rarr;
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Article 7 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+                <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/10b981/ffffff?text=Article+7+Image" alt="Placeholder image for article 7">
+                <div class="p-6">
+                    <h3 class="font-semibold text-xl text-gray-900 mb-2">Portable Power Banks: Which One Lasts the Longest?</h3>
+                    <p class="text-gray-600 text-sm mb-4">We put five popular power banks to the ultimate endurance test to see which one performs best when you need it most.</p>
+                    <a href="#affiliate-link-7" class="article-button inline-block bg-green-500 text-white font-medium py-2 px-4 rounded-lg text-center w-full">
+                        Read Article &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <!-- Article 8 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+                <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/059669/ffffff?text=Article+8+Image" alt="Placeholder image for article 8">
+                <div class="p-6">
+                    <h3 class="font-semibold text-xl text-gray-900 mb-2">The Must-Have Fitness Tracker for Runners in 2024</h3>
+                    <p class="text-gray-600 text-sm mb-4">Analyzing heart rate accuracy, GPS tracking, and battery life for the newest smartwatches dedicated to fitness fanatics.</p>
+                    <a href="#affiliate-link-8" class="article-button inline-block bg-green-500 text-white font-medium py-2 px-4 rounded-lg text-center w-full">
+                        Read Article &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <!-- Article 9 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+                <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/065f46/ffffff?text=Article+9+Image" alt="Placeholder image for article 9">
+                <div class="p-6">
+                    <h3 class="font-semibold text-xl text-gray-900 mb-2">Beginner's Guide to Espresso Machines at Home</h3>
+                    <p class="text-gray-600 text-sm mb-4">Learn which entry-level machine will give you the best coffee without having to invest thousands of dollars.</p>
+                    <a href="#affiliate-link-9" class="article-button inline-block bg-green-500 text-white font-medium py-2 px-4 rounded-lg text-center w-full">
+                        Read Article &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <!-- Article 10 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+                <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/10b981/ffffff?text=Article+10+Image" alt="Placeholder image for article 10">
+                <div class="p-6">
+                    <h3 class="font-semibold text-xl text-gray-900 mb-2">Comparing the Top 3 Robot Vacuum Cleaners</h3>
+                    <p class="text-gray-600 text-sm mb-4">Dust, pet hair, and battery life comparison: We find the self-cleaning device that works hardest so you don't have to.</p>
+                    <a href="#affiliate-link-10" class="article-button inline-block bg-green-500 text-white font-medium py-2 px-4 rounded-lg text-center w-full">
+                        Read Article &rarr;
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Article 11 (The final one!) -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+                <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/059669/ffffff?text=Article+11+Image" alt="Placeholder image for article 11">
+                <div class="p-6">
+                    <h3 class="font-semibold text-xl text-gray-900 mb-2">Essential Car Accessories for a Long Road Trip</h3>
+                    <p class="text-gray-600 text-sm mb-4">From smart chargers to trunk organizers, here are the must-have items to make your next journey smooth and comfortable.</p>
+                    <a href="#affiliate-link-11" class="article-button inline-block bg-green-500 text-white font-medium py-2 px-4 rounded-lg text-center w-full">
+                        Read Article &rarr;
+                    </a>
+                </div>
+            </div>
 
         </div>
     </main>
-    
-    <!-- Footer Section -->
-    <footer class="max-w-4xl mx-auto px-4 py-6 text-center text-gray-500 text-sm border-t mt-8">
-        © 2025 GlowByDesignLR. All Rights Reserved.
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-sm">
+            <p>&copy; 2024 Your Affiliate Hub. As an Amazon Associate, we earn from qualifying purchases.</p>
+            <p class="mt-2 text-gray-400">All prices and availability subject to change. Read our <a href="#" class="underline hover:text-green-500">Disclosure Policy</a>.</p>
+        </div>
     </footer>
 
-    <!-- JavaScript for Read More/Show Less functionality -->
-    <script>
-        /**
-         * Toggles the display of the full article view for a given article ID.
-         * Hides the preview and shows the full content.
-         * @param {number} id - The unique ID of the article.
-         */
-        function showFullArticle(id) {
-            const article = document.getElementById(`article${id}`);
-            if (article) {
-                const preview = article.querySelector('.article-preview');
-                const full = article.querySelector('.full-article');
-                
-                if (preview && full) {
-                    preview.style.display = 'none';
-                    full.style.display = 'block';
-                    // Scroll to the top of the article when opened
-                    article.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            }
-        }
-
-        /**
-         * Toggles the display of the article back to the preview view.
-         * Hides the full content and shows the preview.
-         * @param {number} id - The unique ID of the article.
-         */
-        function hideFullArticle(id) {
-            const article = document.getElementById(`article${id}`);
-            if (article) {
-                const preview = article.querySelector('.article-preview');
-                const full = article.querySelector('.full-article');
-                
-                if (preview && full) {
-                    preview.style.display = 'block';
-                    full.style.display = 'none';
-                    // Scroll back to the top of the article when collapsed
-                    article.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            }
-        }
-    </script>
 </body>
 </html>
